@@ -65,22 +65,31 @@
 
         <li>"git status": checks what branch we are currently on.</li>
 
-        <li>"git checkout -b branch name": creates a new branch and switches to it</li>
+        <li>"git checkout -b branch name": creates a new branch and switches to it.</li>
+
+        <li>"git log": shows all commits that have been performed on a repo.</li>
+
+        
 
         </ul>
 
         <br>
 
-        <h4>Git Work Flow Commands and Order</h4>
+        <h4>Git Work Flow Commands In Order</h4>
 
       <ol>
 
         <li>"git status": checks what branch we are currently on.</li>
 
-        <li>"git add -A" stages ALL (hence the "A") the files that are yet to be staged.</li>
+        <li>"git add -A": stages ALL (hence the "A") the files that are yet to be staged.</li>
 
         <li>"git commit -m "added code to the HTML file" ": use this to commit the files that have been staged to the working branch. 
           The bit in quotes is the note describing what was done in the files.</li>
+
+        <li>"git pull origin main": syncs the local branch you are working on with the remote branch of the same name on github. 
+          It is always important to do a pull before you "push" the code into the branch of the remote repository on github. If you don't sync the branches you may be working on outdated code.</li>
+
+        <li>"git push origin "branch/name"": this "pushes" the changes we made to the remote branch so it has a copy of what the file looks like now, replacing the old one.</li>
 
       </ol>
 
