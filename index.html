@@ -31,6 +31,103 @@
           <li>"Tag" refers to the letters or numbers held within the element brackets i.e. the "li" for the "list item" element.</li>
 
         </ul>
+
+        <h4>HTML Elements</h4>
+
+        <ul>
+
+          <li>"div" is the tag for the element that is used to create a container to group content so that it can be easily styled with CSS. 
+            It does nothing semantic until it is styled. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"> Here's a link to an example of its use.</a></li>
+
+          <li>"a" is the tag for" the "anchor" element. This element has many attributes that may be used with it, a link to a list of them is in the "href" list item. 
+            When you click the link, just scroll down.</li>
+
+          <li>"table" is the tag that is used to create a table feature in the web page. It has multiple distinct sub tags related to it.
+            Two of those being the "thead", "/thead" and the "tbody", "/tbody". These are used to create the head and body of the table feature respectively.
+            Sub to the previous two are the "tr", "/tr" the "th", "/th" and the "td", "/td". The "tr" is to create each individual row for the table. 
+            The "th" is to create the headding for each column in the table. And finally "td" is to create the spot where the actual data goes (it stands for "table data").
+          </li>
+
+          <li>"form" is the tag that is used to create spaces where the webpage can ask users for information and the users can interact with the page by providing said information.
+            There are several subtags that can be used with the "form" tag: 
+            "label", "/label" to say which information you are asking for, "input" which is used with an attribute or two to declare the type of information that is going to be recieved
+            (those attributes being "type=" and "name="), "textarea" gives the user a larger space to input information (a section for user complaints for example), 
+            "select" is used with the tag "option" to provide the user with choices (there is a single choice given for each "option" tag used), 
+            "input" is used to create a button within the form 
+            (such as a sumbition button for when you're done filling it out). Each of these tags is to be used in conjunction with the attributes "type", "name",
+             and "value" which are used to designate
+            types of data thusly where the data will be sent and processed ("type"), how each of the categories are labeled for the end user ("value"), and adds a designation for a server side 
+            program to grab onto ("name").
+          </li>
+
+          <li>"button" creates a button separate from a form or anything else. In order for the "button" element to actually do anything it needs to be connected to some sort of JavaScript.S</li>
+
+          <li>"img" designates an image that you would like to show on the web page, it has to be used with the "src=" attribute to find the designated image.
+            It should also be used with the attribute "alt=" which makes it so if the image doesn't appear for some reason, you atleast know what was supposed to be there
+            (this also helps with Search Engine Optimization).
+          </li>
+
+          <li>"Blockquote" is used mainly for quotes and creates padding around a set of text. This uses an attribute called "cite=" which is used to show the source of the quote.
+            It only shows the citation material in the source code. 
+          </li>
+
+          <li>"abbr" is used to show the non abbreviated form of something that is abbreviated when you hover over the abbreviated material. It does this when used in conjunction with 
+            the attribute "title=". The abbreviation is placed between the beginning part of the element and the end, like in the anchor element ("a").
+          </li>
+
+          <li>"cite" is the tag that is used to italicize bits of info to show that that info is being cited as a source for a set of info on the webpage.
+            It is semantic to let the browser know that that source material is being cited.
+          </li>
+
+          <li></li>
+
+        </ul>
+
+        <h4>HTML Attributes</h4>
+
+        <ul>
+
+        <li>GLOBAL ATTRIBUTES: These are attributes that can be used with all HTML element. 
+          Any element in this list will have a (GA) by the statement of its tag to show that it is one.</li>
+
+        <li>"href" is the tag for an attribute that is generally only used with the "anchor" element. 
+          The href attribute allows a link to be connected to a bit of text or an image, etc. that is contained within the "anchor" element.
+        <a href="https://html.com/attributes/a-href/">Here is a guide to its use and some examples.</a></li>
+
+        </ul>
+
+        <h4>HTML 5 Semantic Tags/Elements</h4>
+
+        <br>
+
+        <p>
+
+          There are different tags/elements that are used to construct a layout of a website. Their meaning and use is self evident for the most part.
+
+        </p>
+
+        <br>
+
+        <ul>
+
+          <li>"header" creates a header for the webpage which can contain a title for the page, logo, social media links and other such things.</li>
+
+          <li>"footer" creates a footer for the webpage which can contain links to other resources, help pages, licensing information, etc..</li>
+
+          <li>"aside" creates a section off to the side of the web page's other main body sections ("section" and "article") and could contain side bar content. </li>
+
+          <li>"section" is where the main content of the site goes (as I understand it)</li>
+
+          <li>"article" goes underneath the "section" and can contain further information like things from your blog.</li>
+
+          <li>"nav" contains the navigation bar for the website (not the webpage because you don't need to navigate to a page you're already on). It is placed just below the header and above
+            the "section" and "aside" parts.</li>
+
+          
+
+
+
+        </ul>
     
     </section>
     
@@ -60,9 +157,14 @@
 
       </ul>
 
-      <h4>CSS Elements</h4>
+      <h4>CSS Elements (Called Rules)</h4>
 
       <ul>
+
+        <li>CSS elements are called "rules".</li>
+
+        <li>The CSS selector is what could be considered the equivolent of an HTML tag. It is the declarative item that starts the "rule". 
+          For example, to apply color to an HTML heading of size one (h1), the "rule" starts with the CSS selector "h1".</li>
 
         <li>"*" means "all elements". It applies its self to all semantic (means to be seen) HTML elements on an HTML document. 
           So if there are any attributes within this CSS element, those attributes will be applied to every HTML element in the HTML document.</li>
