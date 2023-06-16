@@ -53,8 +53,8 @@
             "label", "/label" to say which information you are asking for, "input" which is used with an attribute or two to declare the type of information that is going to be recieved
             (those attributes being "type=" and "name="), "textarea" gives the user a larger space to input information (a section for user complaints for example), 
             "select" is used with the tag "option" to provide the user with choices (there is a single choice given for each "option" tag used), 
-            "input" is used to create a button within the form 
-            (such as a sumbition button for when you're done filling it out). Each of these tags is to be used in conjunction with the attributes "type", "name",
+            "input" can be used to create a button within the form if you use the "type="submit"" attribute and value
+            (example: sumbition button for when you're done filling it out). Each of these tags is to be used in conjunction with the attributes "type", "name",
              and "value" which are used to designate
             types of data thusly where the data will be sent and processed ("type"), how each of the categories are labeled for the end user ("value"), and adds a designation for a server side 
             program to grab onto ("name").
@@ -237,7 +237,115 @@
       </ul>
      
     </section>
-    
+
+    <section class="card" id="Traversy-media-examples">
+
+      <h2>Traversy Media HTML Tutorials</h2>
+
+      <table id="table-example">
+
+
+          <thead>
+
+            <tr>
+
+              <th>Name</th>
+              <th>Email</th>
+              <th>Age</th>
+
+            </tr>
+
+          </thead>
+
+          <tbody>
+
+            <tr>
+
+              <td>Josh</td>
+              <td>bobfink123@gmail.com</td>
+              <td>27</td>
+
+            </tr>
+
+            <tr>
+
+              <td>Jay</td>
+              <td>something@email.com</td>
+              <td>30</td>
+
+            </tr>
+
+          </tbody>
+
+      </table>
+
+      <br>
+
+      <div id="form">
+      <form>
+
+        <label>First name</label>
+        <input type="text" name="first-name" placeholder="Type here">
+
+        <label>Middle name</label>
+        <input type="text" name="middle-name" placeholder="Type here">
+
+        <label>Last name</label>
+        <input type="text" name="last-name" placeholder="Type here">
+        
+        <br>
+        <br>
+
+        <label>Gender</label>
+
+        <select name="gender">
+          
+          <option value="male">Male</option>
+
+          <option value="female">Female</option>
+          
+          <option value="other">Other</option>
+
+        </select>
+
+        <br>
+        <br>
+
+
+        <input type="submit" name="submit" value="submit">
+
+      </form>
+
+      <br>
+      
+      <button>Click Me!</button>
+
+      </div>
+
+      <br>
+
+
+      <img src="./assets/MyHeadShot.jpg" alt="A picture of me" width="200">
+
+      <!--Images are able to be utilized as links to other websites but with this image we can't because it's only on my computer-->
+
+      <blockquote cite="http://traverstymedia.com">
+
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+        Provident corrupti itaque consectetur mollitia nesciunt odio possimus quos dignissimos ex quasi placeat est et, libero explicabo aut similique exercitationem ipsam minima.
+
+      </blockquote>
+
+      <p>The <abbr title="World Wide Web">WWW</abbr> is awesome
+      </p>
+
+      <p><cite>HTML crash course</cite> by Brad Traversy</p>
+
+  
+
+      <br>
+
+    </section>    
     </main>
 
     <footer>
