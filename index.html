@@ -131,6 +131,8 @@
           <li>"nav" contains the navigation bar for the website (not the webpage because you don't need to navigate to a page you're already on). It is placed just below the header and above
             the "section" and "aside" parts.</li>
 
+          <p>If you want a colored border for an element you have to use css, first to set the width of the border then the color. Every element has a an innate border from the start.</p>
+
           
 
 
@@ -181,6 +183,8 @@
           <br> This can be don by simply stating the class/id the element is attributed to and then (using a space to separate the two) stating the tag of the element that you wish to affect. 
           <br>Just like normally selecting a singular element.</li>
 
+        <li>Inorder to use multiple class and Id selectors in a single rule, you have to separate each on by a comma AND a space.</li>
+
       </ul>    
 
         <ul>
@@ -202,18 +206,50 @@
         <p>Declarations in CSS are the parts of the CSS rules that make the rule do something. For example, if you wanted to make the background color for some html element black,
           you'd have to use the declaration "background-color" with in the CSS rule and set the declaration's value to black.</p>
 
+        <br>
+
+        <p>You can use parts of very specific declarations as values with their respective shorthands. For example, "border-left-style" (chooses type of border) is a very specific declaration and cannot do the same thing as another,
+          equally specific declaration such as "border-left-width" (chooses pixel thickness of border). To get around using multiple declarations you can use the  "border-left" declaration to 
+          style and designate the width of the border at the same time.
+        </p>
+
 
         <ul>
 
-          <li> 
+          <li> "border-left-width" is used to make the left side of an element's border thicker than the other three sides.
           </li>
 
+          <li>Changing the type of border (dotted, dashed, etc.) requires the use of the "border-left-style" declaration, which only styles the left side of an element's border to solid black by
+            default.
+          </li>
+
+          <li><p>The box-shadow property lets you apply one or more shadows around an element. Here is basic syntax:
+
+            box-shadow: offsetX offsetY color;
+            Here's how the offsetX and offsetY values work:
+            
+            both offsetX and offsetY accept number values in px and other CSS units
+            a positive offsetX value moves the shadow right and a negative value moves it left
+            a positive offsetY value moves the shadow down and a negative value moves it up
+            if you want a value of zero (0) for any or both offsetX and offsetY, you don't need to add a unit. Every browser understands that zero means no change.</p></li>
+
+            <li>Blur radius is another value of a shadow property. It blurs the edges of a shadow so that it LOOKS like a shadow. You enter a third variable value in the shadow to use this.</li>
+
+            <li>Spread radius is another value of a shadow property/declaration that expands the footprint of the shadow. It is the fourth optional variable value in the shadow declaration.
+              Like blur radius, spread radius defaults to zero if not specified.
+            </li>
         </ul>
       
         <h4>CSS Color Methods</h4>
 
         <p>There are various ways to implement colors into your website with CSS. You can use the rgb/rgba value scheme, hex colors, hsl/hsla color functions, the hwb color function, named colors
           and transparent keywords. For better information refer to the projects in the feecodecamp css module "CSS Color Markers" steps 50 and onwards. </p>
+
+          <br>
+
+        <p></p>
+
+        
 
         
 
@@ -233,7 +269,15 @@
           <li>Color-stops are values that you put at the end of a functions color value ('linear gradiant (90deg, rgb (255, 0, 0) 75%) where the color stop is the percentage value). The way this 
           is written will make the color red occupy 75% of the spectrum that the declaration 'background' with the function 'linear gradiant' creates.</li>
 
-          <li>Opacity</li>
+          <li>Opacity is a declaration that is used to make things see-through.It is stated as a decimal value that equates to percentages. 0 is equal to 0% and 1.0 is 100%.
+             The default for any element is to make it completely opaque (1.0).
+          </li>
+
+          <li>Alpha Channel: The Alpha Channel is another way to deal with opacity. When using it you add a name to the color function that you are using, namely "a". Example: "rgba". 
+            Adding this extra "a" to the end of rgb adds a decimal value (that's equivalent to a percentage value) to the end of the function. Example: (0, 0, 0, 0.5). This can be used with
+            hsl and hex colors (just adds another pair of figures to the end of a hex value just like the rest).
+
+          </li>
 
 
 
