@@ -83,6 +83,8 @@
 
           <li>"figcaption" adds a caption to an image.</li>
 
+          <li>"fieldset" adds a sectioned of portion to the webpage.</li>
+
         </ul>
 
         <h4>HTML Attributes</h4>
@@ -102,7 +104,31 @@
 
         <li>"action" when used with the "form" element is used to show where form data should be sent.</li>
 
+        <li>"method" can be used with the "form" element to say how the back end. For example: "method="get" makes it so form-data can be sent via a GET request. Same can be done for a POST request.</li>
+
+        <li>"type" is used with the "input" element and shows what type of data the browser should expect. If it isn't specified the browser defaults to text. Different things can happen 
+          on the webpage based on the type of data the browser is expecting.The email type only allows emails with a @ and a . in the domain.
+          The password type obscures the input, and warns if the site does not use HTTPS. 
+          <br>
+          To make a submition button, use the "input" element and specify the type as "submit". To add text to it that identifies it to the user give it a "value" of "submit".
+        </li>
+
+        <li>"required" is an attribute used to make an input required to fill out or activate to be able to submit a form. There is no value to be added to this attribute 
+          so it doesn't have an equal sign with quotes.
+        </li>
+
+        <li>"minlength" is an attribute that is used to ensure that a password has atleast a certain number of digits.</li>
+
+        <li>"pattern" is used to specify a given pattern that is provided in its value portion. Ex: 
+          <br> 
+          [a-z0-5]{8,}.
+
+          Given, is a regular expression which matches eight or more lowercase letters or the digits 0 to 5.
+        </li>
+
         </ul>
+
+        <br>
 
         <h4>HTML 5 Semantic Tags/Elements</h4>
 
@@ -165,9 +191,17 @@
 
         <li><a href ="https://developer.mozilla.org/en-US/docs/Web/CSS">A collection of CSS resources for beginners.</a></li>
 
+        <p>Within CSS there are some things that use units (like meters in physics).</p>
+
+        <li>"vh" is one of these and it stands for viewport height. 1vh is equivalent to 1% of the height of the viewport. 100vh is 100% the height of the viewport.  </li>
+
+        <li>"rem" stands for "root em" and is related to the font size of an html element.</li>
+
       </ul>
 
       <h4>CSS Elements (Called Rules)</h4>
+
+      
 
       <ul>
 
