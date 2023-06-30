@@ -85,6 +85,10 @@
 
           <li>"fieldset" adds a sectioned of portion to the webpage.</li>
 
+          <li>"textarea" has the same properties as an "input" element with the "type" attribute "text", but you can put more text into it and can do multiple lines of text. This element
+            requires a closing tag. To enlarge the "textarea" element, use the "row" and "cols" attributes which affect the height and length respectively.
+          </li>
+
         </ul>
 
         <h4>HTML Attributes</h4>
@@ -127,10 +131,6 @@
         </li>
 
         <li>"name" is used to show that two radio/checkboxes/other are related so that you can't check both at the same time.</li>
-
-        <li>"textarea" has the same properties as an "input" element with the "type" attribute "text", but you can put more text into it and can do multiple lines of text. This element
-          requires a closing tag. To enlarge the "textarea" element, use the "row" and "cols" attributes which affect the height and length respectively.
-        </li>
 
         <li>When using form elements like "label" and "input" or "select"+"option" you need to link the label with the actual form with attributes "for" (used in the label element)
           and "id" used in the "input" or "select"+"option" tags.
@@ -217,6 +217,10 @@
 
       <ul>
 
+        <li>Attribute selectors are what is used to select an html element based on a given attribute that it contains. For example, "input[name="password"]" is a css selector
+          for any input element with the name "name="password" " attribute inside it.
+        </li>
+
         <li>CSS elements are called "rules".</li>
 
         <li>The CSS selector is what could be considered the equivolent of an HTML tag. It is the declarative item that starts the "rule". 
@@ -240,6 +244,8 @@
             "margin-bottom", "margin-left", and "margin-right"). If you put two values in for the "margin" shorthand then the first value will effect the top/bottom and the second will do the 
             left/right. 
           </li>
+
+          <li>"margin: 0 auto;" is a good way to center an element.</li>
 
           <li>"padding" again, indicates how much space you want on the inside of an element, this can produce the same result as using "margin" on a child element. "padding" is also
             shorthand that applies the value given to it to all "padding" derivitives ("padding-top","padding-bottom", "padding-right", "padding-left").
