@@ -242,33 +242,9 @@
 
         <ul>
 
-          <li>"margin" is a value that effects the distance from one element to another. It can be set with pixels or percentages (these percentages are measured by the distance from
-            one end of the parent element to another as this can only affect child elements). When using the shorthand "margin" you affect all sides of the element ("margin-top",
-            "margin-bottom", "margin-left", and "margin-right"). If you put two values in for the "margin" shorthand then the first value will effect the top/bottom and the second will do the 
-            left/right. 
-          </li>
+          
 
-          <li>"margin: 0 auto;" is a good way to center an element.</li>
-
-          <li>"padding" again, indicates how much space you want on the inside of an element, this can produce the same result as using "margin" on a child element. "padding" is also
-            shorthand that applies the value given to it to all "padding" derivitives ("padding-top","padding-bottom", "padding-right", "padding-left").
-          </li>
-
-          <li>"overflow"</li>
-
-          <li>"filter" is a function that targets the applied element and can blur it. Example: "filter: blur(1px)" will blur the the element's pixels by one.</li>
-
-          <li>"border-radius" is used to round the corners of a given element. Example: "border-radius: 9px". Different sets of corners can be altered different amounts by number placement.
-            Example: "border-radius: 9x 2px;" where the first number alters the top left and bottom right corners and the second alters the top right and the bottom left corners. 
-            This property can accept up to four values. Then the order is top left, top right, bottom right, and bottom left.
-          </li>
-
-          <li>"box-shadow" is used to give an element the appearance of having a shadow. Example;"border-shadow: 0 0 3px 3px yellow".</li>
-
-          <li>"transform" is a property that can be used to move and element in different ways like rotating the entire thing counter clockwise. Example: "transform: rotate(-0.6deg)"
-            Note the negative sign for "counter".
-          </li>
-
+         
 
 
         </ul>
@@ -288,7 +264,21 @@
 
         <ul>
 
-          <li>"unset" can be used to get rid of a particular setting that you don't want for a specific element but is being applied globally to a page for a page.</li>
+          <li>"margin" is a value that effects the distance from one element to another. It can be set with pixels or percentages (these percentages are measured by the distance from
+            one end of the parent element to another as this can only affect child elements). When using the shorthand "margin" you affect all sides of the element ("margin-top",
+            "margin-bottom", "margin-left", and "margin-right"). If you put two values in for the "margin" shorthand then the first value will effect the top/bottom and the second will do the 
+            left/right. 
+          </li>
+
+          <li>"margin: 0 auto;" is a good way to center an element.</li>
+
+          <li>"padding" again, indicates how much space you want on the inside of an element, this can produce the same result as using "margin" on a child element. "padding" is also
+            shorthand that applies the value given to it to all "padding" derivitives ("padding-top","padding-bottom", "padding-right", "padding-left").
+          </li>
+
+          <li>"overflow"</li>
+
+          <li>"unset" can be used to get rid of a particular setting that you don't want for a specific element but is being applied globally for a page.</li>
 
           <li> "border-left-width" is used to make the left side of an element's border thicker than the other three sides.
           </li>
@@ -313,9 +303,42 @@
               Like blur radius, spread radius defaults to zero if not specified.
             </li>
 
-            <li>"display" </li>
+            <li>"display" specifies the type of rendering behavior (type of box model) of an html element. </li>
 
-            <li></li>
+            <li>"flex-direction" is a property that changes how html elements are displayed. Example: "flex-direction: row-reverse;" will cause the elements to be displayed in reverse order
+              in a row. "flex-direction: column-reverse;" will cause them to be displayed in a column in reverese order aswell.
+            </li>
+
+            <li>"flex-wrap" determines how "flex" items will behave when  they run out of room on the screen. Example: "flex-wrap: wrap;" will cause them to "wrap" into the next row or column.
+              Whether it is a row or column they wrap into is specified by the "flex-direction" property.
+            </li>
+
+            <li>"justify-content" determins how items in a flex container are positioned along the main (X) axis of the webpage. Example: "justify-content: center;" moves everything to the middle
+              of the webpage.
+            </li>
+
+            <li>"align-items" determins how items in a flex container are positioned along the cross axis of the respective element. Example: "align-items: center;" moves everything to the middle.</li>
+
+            <li>"filter" is a function that targets the applied element and can blur it. Example: "filter: blur(1px)" will blur the the element's pixels by one.</li>
+
+            <li>"border-radius" is used to round the corners of a given element. Example: "border-radius: 9px". Different sets of corners can be altered different amounts by number placement.
+              Example: "border-radius: 9x 2px;" where the first number alters the top left and bottom right corners and the second alters the top right and the bottom left corners. 
+              This property can accept up to four values. Then the order is top left, top right, bottom right, and bottom left.
+            </li>
+  
+            <li>"box-shadow" is used to give an element the appearance of having a shadow. Example;"border-shadow: 0 0 3px 3px yellow".</li>
+  
+            <li>"transform" is a property that can be used to move and element in different ways like rotating the entire thing counter clockwise. Example: "transform: rotate(-0.6deg)"
+              Note the negative sign for "counter".
+            </li>
+  
+            <li>"object-fit" is a property that is used to make an "img" element to behave in a specific way. Example: "object-fit: cover;" will make the img element fill the container while 
+              maintaining its aspect ratio, making it crop its self to fit. Use this to fix distorted pictures with in a container.</li>
+  
+            <li>"gap" is a css shorthand property that sets the gaps (aka gutters) between rows and columns. Example: "gap: 16px;" will cause a gap between columns and rows.
+               It's sub properties are row-gap and column-gap. </li>
+  
+            <li>"::after" is a psuedo element that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
 
         </ul>
       
