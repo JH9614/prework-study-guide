@@ -313,11 +313,13 @@
               Whether it is a row or column they wrap into is specified by the "flex-direction" property.
             </li>
 
-            <li>"justify-content" determins how items in a flex container are positioned along the main (X) axis of the webpage. Example: "justify-content: center;" moves everything to the middle
-              of the webpage.
+            <li>"justify-content" determins how items in a flex container are positioned along the main axis of the flex container. As in how it distributes space between
+               and around content items along the main axis of a flex container and the inline axis of a grid container. Example: "justify-content: center;"
+                moves everything to the middle of the webpage.
             </li>
 
-            <li>"align-items" determins how items in a flex container are positioned along the cross axis of the respective element. Example: "align-items: center;" moves everything to the middle.</li>
+            <li>"align-items" determins how items in a flex container are positioned along the cross axis of the respective element. 
+              The direction of the cross axis is determined by the flex-box'a "flex-direction" property. Example: "align-items: center;" moves everything to the middle.</li>
 
             <li>"filter" is a function that targets the applied element and can blur it. Example: "filter: blur(1px)" will blur the the element's pixels by one.</li>
 
@@ -339,6 +341,22 @@
                It's sub properties are row-gap and column-gap. </li>
   
             <li>"::after" is a psuedo element that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
+
+            <li>"font-family" is a property that is used to designate the desired font for a webpage. The font types can be listed with in the property. Any font name with a space in it 
+              must be wrapped in quotes for css. Example: "font-family: "Open Sans", sans-serif". 
+            </li>
+
+            <li>"font-size" is a property that is used to designate the desired font size for a webpage or selected element. The size can be given in units like pixels (px) or percentage of the
+              given element.
+            </li>
+
+            <li>"box-sizing" is a property that specifies any box to have a specific value applied to it. Example: "box-sizing: border-box;" corrects the size of the box in the browser to the size of its 
+              borders, excluding the padding and thickness of the border.
+            </li>
+
+            <li>"font-weight" refers to the boldness of an element's text.</li>
+
+            <li>"letter-spacing" is a property that can be used to adjust the space between each character/letter of text in an element.</li>
 
         </ul>
       
