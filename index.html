@@ -89,6 +89,8 @@
             requires a closing tag. To enlarge the "textarea" element, use the "row" and "cols" attributes which affect the height and length respectively.
           </li>
 
+          <li>"span" is a generic inline container used to designate a bit of text or part of a document for mark up with css more easliy.</li>
+
         </ul>
 
         <h4>HTML Attributes</h4>
@@ -135,6 +137,11 @@
         <li>When using form elements like "label" and "input" or "select"+"option" you need to link the label with the actual form with attributes "for" (used in the label element)
           and "id" used in the "input" or "select"+"option" tags.
         </li>
+
+        <li>"class" is used to give an element a designation that can be used to target it with a css selector. The designations given by "class" attributes are typically not unique to that
+           element. You can use multiple words with spaces between to enable targeting of that element by different css rules at the same time. Example: "<"div"> class="big text""" </li>
+
+        <li>"id" is used to give an element a unique designation that can be used to target it with a css selector.</li>
 
         </ul>
 
@@ -205,17 +212,18 @@
 
         <li>"vh" is one of these and it stands for viewport height. 1vh is equivalent to 1% of the height of the viewport. 100vh is 100% the height of the viewport.  </li>
 
-        <li>"rem" stands for "root em" and is related to the font size of an html element.</li>
+        <li>"rem" stands for "root em" (root element) and relats the font size to the size of the root html element.</li>
 
         <li>"vw" stands for "view port width" and makes it so the specified element will only take up so much of the screen. For example, 60vw would make an element take up 60% of the screen.</li>
 
       </ul>
 
-      <h4>CSS Elements (Called Rules) and Properties</h4>
+      <h4>CSS Elements (Called Rules), Declarations and Properties</h4>
 
       
 
-      <p>Rules are used to designate an element to apply changes to, properties are the changes that are applied.
+      <p>Rules are used to designate/declare an element to apply changes to, properties are the changes that are applied. Selectors are the first characters with in a rule, they state which
+        element you wish to affect with the css rule. If you want to target a child element within a parent element, first state the parent element then the child, separating them with a space.
         <a href="https://www.codecademy.com/resources/docs/css/anatomy" id="anatomyLink">An article about the anatomy of a CSS rule</a> </p>
 
       <ul>
@@ -315,7 +323,9 @@
 
             <li>"justify-content" determins how items in a flex container are positioned along the main axis of the flex container. As in how it distributes space between
                and around content items along the main axis of a flex container and the inline axis of a grid container. Example: "justify-content: center;"
-                moves everything to the middle of the webpage.
+                moves everything to the middle of the webpage. Example: "justify-content: space-between;"  Distribute items evenly. The first item is flush with the start, 
+                the last is flush with the end. So it will space out two elements as much as possible, one flush with the left side of the parent element and one flush with the right side
+                of the parent element.
             </li>
 
             <li>"align-items" determins how items in a flex container are positioned along the cross axis of the respective element. 
