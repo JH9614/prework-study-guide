@@ -50,8 +50,8 @@
 
           <li>"form" is the tag that is used to create spaces where the webpage can ask users for information and the users can interact with the page by providing said information.
             There are several subtags that can be used with the "form" tag: 
-            "label", "/label" to say which information you are asking for, "input" which is used with an attribute or two to declare the type of information that is going to be recieved
-            (those attributes being "type=" and "name="), "textarea" gives the user a larger space to input information (a section for user complaints for example), 
+            "label", "/label" to say which information you are asking for, <br> "input" ("input" elements are self closing) which is used with an attribute or two to declare the type of information that is going to be recieved
+            (those attributes being "type=" and "name="), <br> "textarea" gives the user a larger space to input information (a section for user complaints for example), <br>
             "select" is used with the tag "option" to provide the user with choices (there is a single choice given for each "option" tag used), 
             "input" can be used to create a button within the form if you use the "type="submit"" attribute and value
             (example: sumbition button for when you're done filling it out). Each of these tags is to be used in conjunction with the attributes "type", "name",
@@ -79,7 +79,17 @@
             It is semantic to let the browser know that that source material is being cited.
           </li>
 
-          <li></li>
+          <li>"figure" lets you associate an image with a caption. To use it properly you have to nest an image within the "figure" element and then use the next element on the list.</li>
+
+          <li>"figcaption" adds a caption to an image.</li>
+
+          <li>"fieldset" adds a sectioned of portion to the webpage.</li>
+
+          <li>"textarea" has the same properties as an "input" element with the "type" attribute "text", but you can put more text into it and can do multiple lines of text. This element
+            requires a closing tag. To enlarge the "textarea" element, use the "row" and "cols" attributes which affect the height and length respectively.
+          </li>
+
+          <li>"span" is a generic inline container used to designate a bit of text or part of a document for mark up with css more easliy.</li>
 
         </ul>
 
@@ -94,7 +104,48 @@
           The href attribute allows a link to be connected to a bit of text or an image, etc. that is contained within the "anchor" element.
         <a href="https://html.com/attributes/a-href/">Here is a guide to its use and some examples.</a></li>
 
+        <li>"target" is an attribute that can be used with the "href" attribute within the anchor (has the "a" tag) element, to open a link in a new window. To do this you need to give it 
+          a value of "_blank".
+        </li>
+
+        <li>"action" when used with the "form" element is used to show where form data should be sent.</li>
+
+        <li>"method" can be used with the "form" element to say how the back end. For example: "method="get" makes it so form-data can be sent via a GET request. Same can be done for a POST request.</li>
+
+        <li>"type" is used with the "input" element and shows what type of data the browser should expect. If it isn't specified the browser defaults to text. Different things can happen 
+          on the webpage based on the type of data the browser is expecting.The email type only allows emails with a @ and a . in the domain.
+          The password type obscures the input, and warns if the site does not use HTTPS. 
+          <br>
+          To make a submition button, use the "input" element and specify the type as "submit". To add text to it that identifies it to the user give it a "value" of "submit".
+        </li>
+
+        <li>"required" is an attribute used to make an input required to fill out or activate to be able to submit a form. There is no value to be added to this attribute 
+          so it doesn't have an equal sign with quotes.
+        </li>
+
+        <li>"minlength" is an attribute that is used to ensure that a password has atleast a certain number of digits.</li>
+
+        <li>"pattern" is used to specify a given pattern that is provided in its value portion. Ex: 
+          <br> 
+          [a-z0-5]{8,}.
+
+          Given, is a regular expression which matches eight or more lowercase letters or the digits 0 to 5.
+        </li>
+
+        <li>"name" is used to show that two radio/checkboxes/other are related so that you can't check both at the same time.</li>
+
+        <li>When using form elements like "label" and "input" or "select"+"option" you need to link the label with the actual form with attributes "for" (used in the label element)
+          and "id" used in the "input" or "select"+"option" tags.
+        </li>
+
+        <li>"class" is used to give an element a designation that can be used to target it with a css selector. The designations given by "class" attributes are typically not unique to that
+           element. You can use multiple words with spaces between to enable targeting of that element by different css rules at the same time. Example: "<"div"> class="big text""" </li>
+
+        <li>"id" is used to give an element a unique designation that can be used to target it with a css selector.</li>
+
         </ul>
+
+        <br>
 
         <h4>HTML 5 Semantic Tags/Elements</h4>
 
@@ -123,6 +174,8 @@
           <li>"nav" contains the navigation bar for the website (not the webpage because you don't need to navigate to a page you're already on). It is placed just below the header and above
             the "section" and "aside" parts.</li>
 
+          <p>If you want a colored border for an element you have to use css, first to set the width of the border then the color. Every element has a an innate border from the start.</p>
+
           
 
 
@@ -139,12 +192,12 @@
 
         <li>CSS stands for "Cascading Style Sheets" and is what is used to decorate a webpage</li>
 
-        <li>CSS elements don't require any type of bracket around them.</li>
+        <li>CSS tags don't require any type of bracket around them for them to qualify as a rule (element equivolent in CSS).</li>
           
         <li>To use CSS simply state the tag (what's inside an HTML element's brackets) of the HTML element and any attributes added to that CSS element will be applied to the HTML element.
           Any attributes added to a CSS element will be placed with in the confines of a set of curly brackets/braces ie. these things: {}.</li>
 
-          <li>Attributes in CSS can be applied to multiple different CSS elements at once. This is done by stating an element, adding a comma, then stating the next element. 
+          <li>Rules in CSS can be applied to multiple different CSS elements at once. This is done by stating an element, adding a comma, then stating the next element. 
             This can be done with infinitely many CSS elements. 
             When the comma(s) has been added beween the CSS elements, the attribute(s) to be applied to them can be written like normal (like for a single element). 
             Be sure to place the separate CSS elements on different line (ie. row 68, then 69) to aid in legibility.</li>
@@ -155,11 +208,29 @@
 
         <li><a href ="https://developer.mozilla.org/en-US/docs/Web/CSS">A collection of CSS resources for beginners.</a></li>
 
+        <p>Within CSS there are some things that use units (like meters in physics).</p>
+
+        <li>"vh" is one of these and it stands for viewport height. 1vh is equivalent to 1% of the height of the viewport. 100vh is 100% the height of the viewport.  </li>
+
+        <li>"rem" stands for "root em" (root element) and relats the font size to the size of the root html element.</li>
+
+        <li>"vw" stands for "view port width" and makes it so the specified element will only take up so much of the screen. For example, 60vw would make an element take up 60% of the screen.</li>
+
       </ul>
 
-      <h4>CSS Elements (Called Rules)</h4>
+      <h4>CSS Elements (Called Rules), Declarations and Properties</h4>
+
+      
+
+      <p>Rules are used to designate/declare an element to apply changes to, properties are the changes that are applied. Selectors are the first characters with in a rule, they state which
+        element you wish to affect with the css rule. If you want to target a child element within a parent element, first state the parent element then the child, separating them with a space.
+        <a href="https://www.codecademy.com/resources/docs/css/anatomy" id="anatomyLink">An article about the anatomy of a CSS rule</a> </p>
 
       <ul>
+
+        <li>Attribute selectors are what is used to select an html element based on a given attribute that it contains. For example, "input[name="password"]" is a css selector
+          for any input element with the name "name="password" " attribute inside it.
+        </li>
 
         <li>CSS elements are called "rules".</li>
 
@@ -168,6 +239,211 @@
 
         <li>"*" means "all elements". It applies its self to all semantic (means to be seen) HTML elements on an HTML document. 
           So if there are any attributes within this CSS element, those attributes will be applied to every HTML element in the HTML document.</li>
+
+        <li>Class and id selectors can be used to select certain child elements within a parent element. 
+          <br> This can be don by simply stating the class/id the element is attributed to and then (using a space to separate the two) stating the tag of the element that you wish to affect. 
+          <br>Just like normally selecting a singular element.</li>
+
+        <li>Inorder to use multiple class and Id selectors in a single rule, you have to separate each on by a comma AND a space.</li>
+
+      </ul>    
+
+        <ul>
+
+          
+
+         
+
+
+        </ul>
+
+          <h4>CSS Properties</h4>
+
+        <p>Properties in CSS are the parts of the CSS rules that make the rule do something. For example, if you wanted to make the background color for some html element black,
+          you'd have to use the property "background-color" with in the CSS rule and set the property's value to black.</p>
+
+        <br>
+
+        <p>You can use parts of very specific properties as values with their respective shorthands. For example, "border-left-style" (chooses type of border) is a very specific property and cannot do the same thing as another,
+          equally specific property such as "border-left-width" (chooses pixel thickness of border). To get around using multiple propertys you can use the  "border-left" property to 
+          style and designate the width of the border at the same time.
+        </p>
+
+
+        <ul>
+
+          <li>"margin" is a value that effects the distance from one element to another. It can be set with pixels or percentages (these percentages are measured by the distance from
+            one end of the parent element to another as this can only affect child elements). When using the shorthand "margin" you affect all sides of the element ("margin-top",
+            "margin-bottom", "margin-left", and "margin-right"). If you put two values in for the "margin" shorthand then the first value will effect the top/bottom and the second will do the 
+            left/right. 
+          </li>
+
+          <li>"margin: 0 auto;" is a good way to center an element.</li>
+
+          <li>"padding" again, indicates how much space you want on the inside of an element, this can produce the same result as using "margin" on a child element. "padding" is also
+            shorthand that applies the value given to it to all "padding" derivitives ("padding-top","padding-bottom", "padding-right", "padding-left").
+          </li>
+
+          <li>"overflow"</li>
+
+          <li>"unset" can be used to get rid of a particular setting that you don't want for a specific element but is being applied globally for a page.</li>
+
+          <li> "border-left-width" is used to make the left side of an element's border thicker than the other three sides.
+          </li>
+
+          <li>Changing the type of border (dotted, dashed, etc.) requires the use of the "border-left-style" property, which only styles the left side of an element's border to solid black by
+            default.
+          </li>
+
+          <li><p>The box-shadow property lets you apply one or more shadows around an element. Here is basic syntax:
+
+            box-shadow: offsetX offsetY color;
+            Here's how the offsetX and offsetY values work:
+            
+            both offsetX and offsetY accept number values in px and other CSS units
+            a positive offsetX value moves the shadow right and a negative value moves it left
+            a positive offsetY value moves the shadow down and a negative value moves it up
+            if you want a value of zero (0) for any or both offsetX and offsetY, you don't need to add a unit. Every browser understands that zero means no change.</p></li>
+
+            <li>Blur radius is another value of a shadow property. It blurs the edges of a shadow so that it LOOKS like a shadow. You enter a third variable value in the shadow to use this.</li>
+
+            <li>Spread radius is another value of a shadow property/property that expands the footprint of the shadow. It is the fourth optional variable value in the shadow property.
+              Like blur radius, spread radius defaults to zero if not specified.
+            </li>
+
+            <li>"display" specifies the type of rendering behavior (type of box model) of an html element. </li>
+
+            <li>"flex-direction" is a property that changes how html elements are displayed. Example: "flex-direction: row-reverse;" will cause the elements to be displayed in reverse order
+              in a row. "flex-direction: column-reverse;" will cause them to be displayed in a column in reverese order aswell.
+            </li>
+
+            <li>"flex-wrap" determines how "flex" items will behave when  they run out of room on the screen. Example: "flex-wrap: wrap;" will cause them to "wrap" into the next row or column.
+              Whether it is a row or column they wrap into is specified by the "flex-direction" property.
+            </li>
+
+            <li>"justify-content" determins how items in a flex container are positioned along the main axis of the flex container. As in how it distributes space between
+               and around content items along the main axis of a flex container and the inline axis of a grid container. Example: "justify-content: center;"
+                moves everything to the middle of the webpage. Example: "justify-content: space-between;"  Distribute items evenly. The first item is flush with the start, 
+                the last is flush with the end. So it will space out two elements as much as possible, one flush with the left side of the parent element and one flush with the right side
+                of the parent element.
+            </li>
+
+            <li>"align-items" determins how items in a flex container are positioned along the cross axis of the respective element. 
+              The direction of the cross axis is determined by the flex-box'a "flex-direction" property. Example: "align-items: center;" moves everything to the middle.</li>
+
+            <li>"filter" is a function that targets the applied element and can blur it. Example: "filter: blur(1px)" will blur the the element's pixels by one.</li>
+
+            <li>"border-radius" is used to round the corners of a given element. Example: "border-radius: 9px". Different sets of corners can be altered different amounts by number placement.
+              Example: "border-radius: 9x 2px;" where the first number alters the top left and bottom right corners and the second alters the top right and the bottom left corners. 
+              This property can accept up to four values. Then the order is top left, top right, bottom right, and bottom left.
+            </li>
+  
+            <li>"box-shadow" is used to give an element the appearance of having a shadow. Example;"border-shadow: 0 0 3px 3px yellow".</li>
+  
+            <li>"transform" is a property that can be used to move and element in different ways like rotating the entire thing counter clockwise. Example: "transform: rotate(-0.6deg)"
+              Note the negative sign for "counter".
+            </li>
+  
+            <li>"object-fit" is a property that is used to make an "img" element to behave in a specific way. Example: "object-fit: cover;" will make the img element fill the container while 
+              maintaining its aspect ratio, making it crop its self to fit. Use this to fix distorted pictures with in a container.</li>
+  
+            <li>"gap" is a css shorthand property that sets the gaps (aka gutters) between rows and columns. Example: "gap: 16px;" will cause a gap between columns and rows.
+               It's sub properties are row-gap and column-gap. </li>
+  
+            <li>"::after" is a psuedo element that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
+
+            <li>"font-family" is a property that is used to designate the desired font for a webpage. The font types can be listed with in the property. Any font name with a space in it 
+              must be wrapped in quotes for css. Example: "font-family: "Open Sans", sans-serif". 
+            </li>
+
+            <li>"font-size" is a property that is used to designate the desired font size for a webpage or selected element. The size can be given in units like pixels (px) or percentage of the
+              given element.
+            </li>
+
+            <li>"box-sizing" is a property that specifies any box to have a specific value applied to it. Example: "box-sizing: border-box;" corrects the size of the box in the browser to the size of its 
+              borders, excluding the padding and thickness of the border.
+            </li>
+
+            <li>"font-weight" refers to the boldness of an element's text.</li>
+
+            <li>"letter-spacing" is a property that can be used to adjust the space between each character/letter of text in an element.</li>
+
+        </ul>
+      
+        <h4>CSS Color Methods</h4>
+
+        <p>There are various ways to implement colors into your website with CSS. You can use the rgb/rgba value scheme, hex colors, hsl/hsla color functions, the hwb color function, named colors
+          and transparent keywords. For better information refer to the projects in the feecodecamp css module "CSS Color Markers" steps 50 and onwards. </p>
+
+          <br>
+
+        <p></p>
+
+        
+
+        
+
+        <ul>
+          
+          <li>Hex color code is a type of color designation that uses three sets of two figures that aren't separated by spaces or commas. Format: "000000". All zeros means black all f's means white.
+            The first two figures are for red, the second are for green, and the last two are for blue.
+          </li>
+
+          <li>RGB color code is another way to designate colors. It is comprised of a set of three neumerical figures that are separated by commas and spaces. Format: "0, 0, 0". All zeros means 
+            black. The highest value able to be put in each spot is 255, which maxes out the color that is added, so "255, 0, 0" would be as red as possible. All values set at 255 will make white.  </li>
+
+          <li>HSL stands for hue, saturation, and lightness. It has three values that need to be filled out, the first one (hue) is just a number, the next two (saturation and lightness 
+            respectively) are percentages. Format: "185, 16%, 50%". The "hue" designates the color that is to be used and the rest are descriptors detailing how much and how intense. 
+          </li>
+
+          <li>Color-stops are values that you put at the end of a functions color value ('linear gradiant (90deg, rgb (255, 0, 0) 75%) where the color stop is the percentage value). The way this 
+          is written will make the color red occupy 75% of the spectrum that the property 'background' with the function 'linear gradiant' creates.</li>
+
+          <li>Opacity is a property that is used to make things see-through.It is stated as a decimal value that equates to percentages. 0 is equal to 0% and 1.0 is 100%.
+             The default for any element is to make it completely opaque (1.0).
+          </li>
+
+          <li>Alpha Channel: The Alpha Channel is another way to deal with opacity. When using it you add a name to the color function that you are using, namely "a". Example: "rgba". 
+            Adding this extra "a" to the end of rgb adds a decimal value (that's equivalent to a percentage value) to the end of the function. Example: (0, 0, 0, 0.5). This can be used with
+            hsl and hex colors (just adds another pair of figures to the end of a hex value just like the rest).
+
+          </li>
+
+
+
+        </ul>
+
+      <h4>CSS functions</h4>
+
+      <p>A CSS function is used within a property and is used to affect the way the value is displayed by the CSS property. For example: 'linear-gradient' is a function that can 
+        be used with the property 'background' to change how the colors are displayed in the background of the element. It creates a spectrum from one color to the other and can only be used
+        with two or more colors. The color values put in the function don't have to be a specific format, they just have to be colors that can be rendered.
+      </p>
+
+      <ul>
+
+        <li>'linear-gradient' is a function that is used to create a spectrum from one color to another. You can choose how this spectrum is oriented with the gradient direction arguement (data piece).
+          It can be oriented in any direction, left-right, up-down, or kitty corner based on whether you input anything from 0degs to 359degs (360 is the same as putting 0 because it's like a color wheel).
+        </li>
+
+      </ul>
+
+      <h4>Pseudo-selectors</h4>
+
+      <p>A pseudo-selector is a keyword that specifies a certain state that the selected element can be in. For example, when a user hovers their mouse over a link that link can change color.
+        The mouse hovering over the link is the state that is being reffered to, when it is in that state (possibly about to be selected) it changes color but only then for that specific
+        pseudo-selector.
+      </p>
+
+      <ul>
+
+        <li>":hover" is the pseudo-selector that can be used to make a link change color when you hover your mouse over it.</li>
+
+        <li>":active" is the pseudo-selector that can be used to make a link change color when you click it.</li>
+
+        <li>":visited" is the pseudo-selector that can be used to make a link change color after you've used it.</li>
+
+        
 
       </ul>
 
@@ -329,6 +605,8 @@
 
       <!--Images are able to be utilized as links to other websites but with this image we can't because it's only on my computer-->
 
+
+      <!--For some reason there's no padding on the text in the blockquote like there was in his video-->
       <blockquote cite="http://traverstymedia.com">
 
         Lorem ipsum dolor, sit amet consectetur adipisicing elit.
