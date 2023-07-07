@@ -40,6 +40,10 @@
             SEO (Search Engine Optimization).
           </li>
 
+          <li>"header" is a semantic html element that is used to introduce the webpage and provide a navigation menu.</li>
+
+          <li>"main" is a semantic html element that is used to contain the core content of the page.</li>
+
           <li>"div" is the tag for the element that is used to create a container to group content so that it can be easily styled with CSS. 
             It does nothing semantic until it is styled. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"> Here's a link to an example of its use.</a></li>
 
@@ -68,7 +72,7 @@
 
           <li>"img" designates an image that you would like to show on the web page, it has to be used with the "src=" attribute to find the designated image.
             It should also be used with the attribute "alt=" which makes it so if the image doesn't appear for some reason, you atleast know what was supposed to be there
-            (this also helps with Search Engine Optimization).
+            (this also helps with Search Engine Optimization). Example: "img src="some.url" alt="some image" " The "img" element is self closing.
           </li>
 
           <li>"Blockquote" is used mainly for quotes and creates padding around a set of text. This uses an attribute called "cite=" which is used to show the source of the quote.
@@ -152,6 +156,11 @@
            element. You can use multiple words with spaces between to enable targeting of that element by different css rules at the same time. Example: "<"div"> class="big text""" </li>
 
         <li>"id" is used to give an element a unique designation that can be used to target it with a css selector.</li>
+
+        <li>"content"  is an attribute of the "meta" element and is used to set the meta information in an HTML document.
+           This can be the information for the description or the keywords, for name attribute.  </li>
+
+        <li>"rel" shows the relationship between a linked resource (page/picture/css file) and the current document.</li>
 
         </ul>
 
@@ -376,6 +385,12 @@
 
             <li>"letter-spacing" is a property that can be used to adjust the space between each character/letter of text in an element.</li>
 
+            <li>"width" is a property that can be used to scale an element to the desired width of its parent element or webpage. You can set a max width for a set of elements by declaring that
+              element type and using the "width" property to set it. Example: "element {width: max(250px 20vw)}". "vw" = viewport width.
+            </li>
+
+            <li>"aspect-ratio" is a property that determines the aspect ratio of an element/image. Example: "aspect-ratio: 35 / 4;". Note the use of spaces between the numbers and the slash.</li>
+
         </ul>
       
         <h4>CSS Color Methods</h4>
@@ -434,6 +449,8 @@
           It can be oriented in any direction, left-right, up-down, or kitty corner based on whether you input anything from 0degs to 359degs (360 is the same as putting 0 because it's like a color wheel).
         </li>
 
+        
+
       </ul>
 
       <h4>Pseudo-selectors</h4>
@@ -459,6 +476,9 @@
         
 
       </ul>
+
+      <p>SVG, or Scalable Vector Graphics is an image format that is used for two dimenstional images/graphics and has support for interactivity and animation.
+        Scalable Vector Graphics contain a "path" attribute that allows the image to be scaled to the webpage without affecting the resolution of the resultant image. </p>
 
     </section>
     
