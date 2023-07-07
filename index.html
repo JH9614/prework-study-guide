@@ -36,6 +36,10 @@
 
         <ul>
 
+          <li>"meta" is the tag used to place information in the head of the webpage so that the browser can use that information to render the page. The "meta" info is also useful for 
+            SEO (Search Engine Optimization).
+          </li>
+
           <li>"div" is the tag for the element that is used to create a container to group content so that it can be easily styled with CSS. 
             It does nothing semantic until it is styled. <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/div"> Here's a link to an example of its use.</a></li>
 
@@ -99,6 +103,11 @@
 
         <li>GLOBAL ATTRIBUTES: These are attributes that can be used with all HTML element. 
           Any element in this list will have a (GA) by the statement of its tag to show that it is one.</li>
+
+        <li>"charset" is an attribute that is used to tell the browser how to render the lettering and numbers on a page.</li>
+
+        <li>"content" is an attribute typically used in a "meta" tag. It can be used to tell the browser how to fill the screen with the page. 
+          Example: "meta name="viewport" content="width=device-width, initial-scale=1" " is how you tell the browser to fill the *whole* screen of any device with the web page.</li>
 
         <li>"href" is the tag for an attribute that is generally only used with the "anchor" element. 
           The href attribute allows a link to be connected to a bit of text or an image, etc. that is contained within the "anchor" element.
@@ -340,7 +349,7 @@
   
             <li>"box-shadow" is used to give an element the appearance of having a shadow. Example;"border-shadow: 0 0 3px 3px yellow".</li>
   
-            <li>"transform" is a property that can be used to move and element in different ways like rotating the entire thing counter clockwise. Example: "transform: rotate(-0.6deg)"
+            <li>"transform" is a property that can be used to move an element in different ways like rotating the entire thing counter clockwise. Example: "transform: rotate(-0.6deg)"
               Note the negative sign for "counter".
             </li>
   
@@ -349,8 +358,6 @@
   
             <li>"gap" is a css shorthand property that sets the gaps (aka gutters) between rows and columns. Example: "gap: 16px;" will cause a gap between columns and rows.
                It's sub properties are row-gap and column-gap. </li>
-  
-            <li>"::after" is a psuedo element that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
 
             <li>"font-family" is a property that is used to designate the desired font for a webpage. The font types can be listed with in the property. Any font name with a space in it 
               must be wrapped in quotes for css. Example: "font-family: "Open Sans", sans-serif". 
@@ -442,6 +449,11 @@
         <li>":active" is the pseudo-selector that can be used to make a link change color when you click it.</li>
 
         <li>":visited" is the pseudo-selector that can be used to make a link change color after you've used it.</li>
+
+        <li>"::after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
+
+        <li>":not" is a psuedo-selector that can be used to select all elements that don't correspond with a certain Id or class attribute. Ex: "div:not(#example) {}" will apply the css 
+          properties the css rule contains to any element that doesn't have an Id of "example". </li>
 
         
 
