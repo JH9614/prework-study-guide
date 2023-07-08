@@ -110,6 +110,12 @@
 
         <li>"charset" is an attribute that is used to tell the browser how to render the lettering and numbers on a page.</li>
 
+        <li>"action" is used to specify where form data from a webpage will be sent to the server when submitted.</li>
+
+        <li>"method" is used to specify how to send form data from the webpage to the server. 
+          For example: "method="get" makes it so form-data can be sent via a GET request. Same can be done for a POST request.
+        </li>
+
         <li>"content" is an attribute typically used in a "meta" tag. It can be used to tell the browser how to fill the screen with the page. 
           Example: "meta name="viewport" content="width=device-width, initial-scale=1" " is how you tell the browser to fill the *whole* screen of any device with the web page.</li>
 
@@ -120,10 +126,6 @@
         <li>"target" is an attribute that can be used with the "href" attribute within the anchor (has the "a" tag) element, to open a link in a new window. To do this you need to give it 
           a value of "_blank".
         </li>
-
-        <li>"action" when used with the "form" element is used to show where form data should be sent.</li>
-
-        <li>"method" can be used with the "form" element to say how the back end. For example: "method="get" makes it so form-data can be sent via a GET request. Same can be done for a POST request.</li>
 
         <li>"type" is used with the "input" element and shows what type of data the browser should expect. If it isn't specified the browser defaults to text. Different things can happen 
           on the webpage based on the type of data the browser is expecting.The email type only allows emails with a @ and a . in the domain.
@@ -161,6 +163,11 @@
            This can be the information for the description or the keywords, for name attribute.  </li>
 
         <li>"rel" shows the relationship between a linked resource (page/picture/css file) and the current document.</li>
+
+        <li>"role" is an attribute that is used to define the purpose for an element which is useful for assistive technologies. It's part of the WAI (Web Accessibility Initiative).
+          Example: "section role="region /section".
+
+        </li>
 
         </ul>
 
@@ -450,6 +457,20 @@
         </li>
 
         
+
+      </ul>
+
+      <h4>CSS selectors</h4>
+
+        <p>Selectors are basically just stating the tag of the html elements that you're targeting over again. Unless they are class, id, "*", or others.</p>
+
+      <ul>
+
+        <li>Id selectors are just the name of the id proceeded by a "#" with no spaces.</li>
+
+        <li>Class selectors are just the name of the class proceeded by a "." with no spaces.</li>
+
+        <li>">" is a selector that is used to target a child element of a parent element. Example: "nav > ul {}".</li>
 
       </ul>
 
