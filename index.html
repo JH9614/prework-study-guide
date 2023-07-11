@@ -99,6 +99,14 @@
 
           <li>"span" is a generic inline container used to designate a bit of text or part of a document for mark up with css more easliy.</li>
 
+          <li>"legend" is used to create a caption for the content of its parent filedset element.</li>
+
+          <li>"fieldset" is an element that is used to create a visually separate space from the rest of the webpage. It functions as a visual container, so-to-speak. </li>
+
+          <li>"label" is used to semantically denote a "form" sub/child element and should always be explicitly linked with the input that it labels. This is done by giving the "input" an "id"
+            and then giving the "label" a "for" attribute that is identical to the value of the "id".
+          </li>
+
         </ul>
 
         <h4>HTML Attributes</h4>
@@ -148,7 +156,7 @@
         </li>
 
         <li>"name" is used to specify a name for an html attribute and can be used to reference the element for JavaScript. It can show that two radio/checkboxes/other are related so that you
-           can't check both at the same time.</li>
+           can't check both at the same time if you give them the same name.</li>
 
         <li>When using form elements like "label" and "input" or "select"+"option" you need to link the label with the actual form with attributes "for" (used in the label element)
           and "id" used in the "input" or "select"+"option" tags.
@@ -169,11 +177,19 @@
 
         </li>
 
+        <li>"aria-labelledby" is an attribute that identifies an element that is being used to label another element. For example, you can use a heading to label a section with "h2", id it
+          as "someid" and then in the parent element you can use the "aria-labelledby" attribute to refer to that by giving it the same value as the id.
+        </li>
+
+        <li>"placeholder" is an attribute that is used to show that you can type in a text box. When the user starts typing, the text disappears. Using this is not best practice though, as the user
+          can confuse the "placeholder" text as an existing input and believe the section is already filled out.
+        </li>
+
         </ul>
 
         <br>
 
-        <h4>HTML 5 Semantic Tags/Elements</h4>
+        <h4>HTML 5 Semantic Tags/Elements</h4> 
 
         <br>
 
