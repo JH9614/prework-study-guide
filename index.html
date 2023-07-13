@@ -288,6 +288,8 @@
 
         <li>Inorder to use multiple class and Id selectors in a single rule, you have to separate each on by a comma AND a space.</li>
 
+        <li></li>
+
       </ul>    
 
         <ul>
@@ -414,6 +416,15 @@
 
             <li>"aspect-ratio" is a property that determines the aspect ratio of an element/image. Example: "aspect-ratio: 35 / 4;". Note the use of spaces between the numbers and the slash.</li>
 
+            <li>"text-decoration" is a property that allows you to alter semantic textual elements. For example, you can get rid of an underline on a set of text by using "text-decoration: none".
+              
+            <li>"cursor" is used with ":hover" to change the cursor to something other than the mouse arrow when you hover it over an element. Example: "button:hover {cursor: pointer;}" will
+              change the mouse arrow to the pointer hand.
+            </li>
+
+            <li>"top" is a css property that designates the distance a particular element is from the top of the page. If you want to make something stay at the top of a page you simply have to
+              give this property a value of 0.</li>
+
         </ul>
       
         <h4>CSS Color Methods</h4>
@@ -486,7 +497,10 @@
 
         <li>Class selectors are just the name of the class proceeded by a "." with no spaces.</li>
 
-        <li>">" is a selector that is used to target a child element of a parent element. Example: "nav > ul {}".</li>
+        <li>">" is a selector that is used to target a child element of a parent element. Example: "nav > ul {}". When targetting multiple elements inside a single parent element, state the parent
+          twice and each child once. For example if you have a parent called ".info" and the children are "label" and "input" you do this: ".info > label, .info > input", or
+          ".info label, .info input". Note the use of a comma in both declarations.
+        </li>
 
       </ul>
 
@@ -505,7 +519,7 @@
 
         <li>":visited" is the pseudo-selector that can be used to make a link change color after you've used it.</li>
 
-        <li>"::after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
+        <li>":after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
 
         <li>":not" is a psuedo-selector that can be used to select all elements that don't correspond with a certain Id or class attribute. Ex: "div:not(#example) {}" will apply the css 
           properties the css rule contains to any element that doesn't have an Id of "example". </li>
