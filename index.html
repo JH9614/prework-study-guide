@@ -373,7 +373,8 @@
             </li>
 
             <li>"align-items" determins how items in a flex container are positioned along the cross axis of the respective element. 
-              The direction of the cross axis is determined by the flex-box'a "flex-direction" property. Example: "align-items: center;" moves everything to the middle.</li>
+              The direction of the cross axis is determined by the flex-box'a "flex-direction" property. Example: "align-items: center;" moves everything to the middle. 
+            NOTE: in order to use this property the element its self that is in question needs to have been made/declared to be a flex container/flexbox.</li>
 
             <li>"filter" is a function that targets the applied element and can blur it. Example: "filter: blur(1px)" will blur the the element's pixels by one.</li>
 
@@ -424,6 +425,30 @@
 
             <li>"top" is a css property that designates the distance a particular element is from the top of the page. If you want to make something stay at the top of a page you simply have to
               give this property a value of 0.</li>
+
+            <li>"list-style" is a css property that allows you to directly change the styling of a "li" element. For example, if you want to remove the dots from an unordered list element,
+              and replace it with nothing then you can just do "list-style: none;".
+            </li>
+
+            <li>"scroll-behavior" is a property that is used to change how links that are used to navigate the local page effect the screen of the user. Using the "smooth" value for this
+              property makes the computer scroll to the linked section of the webpage instead of instantly jumping to that location as is default. This helps the user not to be disoriented. </li>
+
+        </ul>
+
+        <h4>At-rules</h4>
+
+        <ul>
+
+          <li>"@media" is an at-rule that has a feature called "prefers-reduced-motion" which is used to modify CSS rules based on the user's preferences. It takes one of the following values:
+            "reduce", and "no-preference". It is wrapped around an existing selector with the existing selector sort of functioning like the declaration part of the rule (property and property
+            value). Example: 
+            <br>
+            "@media (feature: value) {
+              selector {
+                styles
+              }
+            }"
+          </li>
 
         </ul>
       
@@ -502,6 +527,13 @@
           ".info label, .info input". Note the use of a comma in both declarations.
         </li>
 
+        <li>Another way the ">" effect in CSS can be replicated to an extant by merely using the indivdual tags in their appropriate order of execution. For example, "A" is the parent element 
+          of "B" so when you wish to specify "B" in the CSS rule's declaration portion, you merely have to first state "A" then "B" with a space in between.
+          <br>
+          To target a specific element and the rest of the elements in a parent with a CSS rule at the same time you can use something like this: "footer, footer a". Where "footer" is the parent
+          and "a" is a specific child of that element. 
+        </li>
+
       </ul>
 
       <h4>Pseudo-selectors</h4>
@@ -513,16 +545,20 @@
 
       <ul>
 
-        <li>":hover" is the pseudo-selector that can be used to make a link change color when you hover your mouse over it.</li>
+        <li>"::hover" is the pseudo-selector that can be used to make a link change color when you hover your mouse over it.</li>
 
-        <li>":active" is the pseudo-selector that can be used to make a link change color when you click it.</li>
+        <li>"::active" is the pseudo-selector that can be used to make a link change color when you click it.</li>
 
-        <li>":visited" is the pseudo-selector that can be used to make a link change color after you've used it.</li>
+        <li>"::visited" is the pseudo-selector that can be used to make a link change color after you've used it.</li>
 
-        <li>":after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
+        <li>"::after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery::after {}" is how you use it.</li>
 
-        <li>":not" is a psuedo-selector that can be used to select all elements that don't correspond with a certain Id or class attribute. Ex: "div:not(#example) {}" will apply the css 
+        <li>"::not" is a psuedo-selector that can be used to select all elements that don't correspond with a certain Id or class attribute. Ex: "div:not(#example) {}" will apply the css 
           properties the css rule contains to any element that doesn't have an Id of "example". </li>
+
+        <li>"::before" is a pseudo-selector that can be used to create a pseudo-element that is the FIRST child of the selected element. It's mainly used to add cosmetic content to an element
+          by using the "content" property. This pseudo-element that is created is in-line by default.
+        </li>
 
         
 
