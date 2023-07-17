@@ -107,6 +107,20 @@
             and then giving the "label" a "for" attribute that is identical to the value of the "id".
           </li>
 
+          <li>"caption" is an element that is used to caption "table" elements. It must be the first child of each respective "table" element.</li>
+
+          <li>"thead" is the element that creates the header section of a "table" element.</li>
+
+          <li>"tbody" is the element that creates the main portion of the "table" element that will hold most of the information.</li>
+
+          <li>"tr" is the element that creates a row in a "table" elemnt. In order to use it you have to nest it inside a "tbody" or "thead" element, which its self will be a child of the "table"
+            element.
+          </li>
+
+          <li>"td" is the element that creates a data cell within the "tr" element, so naturally it is a child of the "tr" element when in application.</li>
+
+          <li>"th" is the element that creates a header cell for each data cell.</li>
+
         </ul>
 
         <h4>HTML Attributes</h4>
@@ -180,6 +194,8 @@
         <li>"aria-labelledby" is an attribute that identifies an element that is being used to label another element. For example, you can use a heading to label a section with "h2", id it
           as "someid" and then in the parent element you can use the "aria-labelledby" attribute to refer to that by giving it the same value as the id.
         </li>
+
+        <li>"aria-hidden" is an attribute that indicates that the element and all of its children are to be hidden from the user and screen readers but readable to the browser.</li>
 
         <li>"placeholder" is an attribute that is used to show that you can type in a text box. When the user starts typing, the text disappears. Using this is not best practice though, as the user
           can confuse the "placeholder" text as an existing input and believe the section is already filled out.
@@ -434,6 +450,10 @@
 
             <li>"scroll-behavior" is a property that is used to change how links that are used to navigate the local page effect the screen of the user. Using the "smooth" value for this
               property makes the computer scroll to the linked section of the webpage instead of instantly jumping to that location as is default. This helps the user not to be disoriented. </li>
+
+            <li>"caption-side" is a CSS property that is able to move the HTML "caption" elements around to their desired locations. The "caption" element is mainly for use with the "table"
+              element.
+            </li>
 
         </ul>
 
