@@ -464,7 +464,10 @@
               <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/white-space">Click here to learn with a demo.</a>
             </li>
 
-            <li>"position"</li>
+            <li>"position" tells whether an element should move from its original position either when the page is scrolled through or just passively by default. It can be used to cause an 
+              element to "stick" to the top or bottom of the screen when scrolling past the element. For example, you would type this phrase to make it stick at the top of the screen when scrolling
+              downwards: "position: sticky;", then "top: 0;". This will make the element stick at the very top of the screen with no gap between it and the edge, hence the "0".
+            </li>
 
         </ul>
 
@@ -541,6 +544,13 @@
           It can be oriented in any direction, left-right, up-down, or kitty corner based on whether you input anything from 0degs to 359degs (360 is the same as putting 0 because it's like a color wheel).
         </li>
 
+        <li>"calc()" is a function that lets you calculate a value based on other values. For example, you can use it to calculate the width of the viewport minus the margin of an element:
+          ".example {
+            margin: 10px;
+            width: calc(100% - 20px);
+          }"
+        </li>
+
         
 
       </ul>
@@ -565,6 +575,10 @@
           <br>
           To target a specific element and the rest of the elements in a parent with a CSS rule at the same time you can use something like this: "footer, footer a". Where "footer" is the parent
           and "a" is a specific child of that element. 
+        </li>
+
+        <li>To target any child element with a certain attribute, regardless of the attributes value you can use this syntax: "#years span[class]{}". The "span" is the type of element being targeted,
+          the "class" is the type of attribute being targeted, and the "#years" the id of the parent.
         </li>
 
       </ul>
@@ -592,6 +606,10 @@
         <li>":before" is a pseudo-selector that can be used to create a pseudo-element that is the FIRST child of the selected element. It's mainly used to add cosmetic content to an element
           by using the "content" property. This pseudo-element that is created is in-line by default.
         </li>
+
+        <li>":last-of-type" is a pseudo-selector that is used to target the last child in a parent element.</li>
+
+        <li>":first-of-type" is a pseudo-selector that is used to target the first child in a parent element.</li>
 
         
 
