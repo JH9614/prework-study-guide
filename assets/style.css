@@ -61,4 +61,15 @@ p,
     border: 5px black;
   }
 
+  #css-section {
+    color: peru;
+  }
+
+  a:hover {
+    color: red !important;
+  }
+
+  a:visited {
+    color: purple;
+  }
   

@@ -400,6 +400,14 @@
               Example: "border-radius: 9x 2px;" where the first number alters the top left and bottom right corners and the second alters the top right and the bottom left corners. 
               This property can accept up to four values. Then the order is top left, top right, bottom right, and bottom left.
             </li>
+
+            <li>"border" is a property that allows you to customize the nature of the border of any element. For example, "border: 2px dotted #fff" will create a two pixel thick, white dotted line
+              around any element.
+            </li>
+
+            <li>"border-collapse" sets whether or not cells with in a table have their own borders or share them. The value "collapse" will make them share borders, while the value "separate"
+              will cause them to have their own borders and a small space in between them.
+            </li>
   
             <li>"box-shadow" is used to give an element the appearance of having a shadow. Example;"border-shadow: 0 0 3px 3px yellow".</li>
   
@@ -467,6 +475,15 @@
             <li>"position" tells whether an element should move from its original position either when the page is scrolled through or just passively by default. It can be used to cause an 
               element to "stick" to the top or bottom of the screen when scrolling past the element. For example, you would type this phrase to make it stick at the top of the screen when scrolling
               downwards: "position: sticky;", then "top: 0;". This will make the element stick at the very top of the screen with no gap between it and the edge, hence the "0".
+            </li>
+
+            <li>"!important" is a VALUE that you can give to any property that you can use to make sure a rule is applied to an element regardless of execution order or specificity.
+              For example, "position: absolute !important" is how you would write it.
+            </li>
+
+            <li>"top" is a property that allows you to say how close or far you want a child from/to the top of the parent. Example: 
+              "top: -2.25rem" will move the child closer to the top of the parent the greater the size of the negative number, while a positive number will do the opposite.
+              There are other properties that are just like this but they have to do with each respective side of the screen and are named accordingly.
             </li>
 
         </ul>
@@ -549,6 +566,8 @@
             margin: 10px;
             width: calc(100% - 20px);
           }"
+          This is good for running a webpage on multiple types of devices with different screen sizes because it automatically adjusts the elements to take up a set amount ("2px" or whatever) 
+          of horizontal (only the case for this application) of the parent element.
         </li>
 
         
@@ -579,6 +598,16 @@
 
         <li>To target any child element with a certain attribute, regardless of the attributes value you can use this syntax: "#years span[class]{}". The "span" is the type of element being targeted,
           the "class" is the type of attribute being targeted, and the "#years" the id of the parent.
+        </li>
+
+        <li>Targeting any element with a specific attribute that has a certain value can be done with a selector written in the format: 
+          "elementTag[attribute="value"]". A specific example would be like this: "tr[class="total"]", where "tr" is the table row element, "class" is the assigned class attribute and "total"
+        is the assigned class attribute's value. 
+      <br>
+          Taking that even further, you can target a child element within the parent with "parent[attribute="value"] child".
+      <br>
+      The key difference between "tr[class="total"]"" and "tr.total" is that the first will select "tr" elements where the only
+       class is "total". The second will select "tr" elements where the class includes "total".
         </li>
 
       </ul>
