@@ -405,6 +405,10 @@
               around any element.
             </li>
 
+            <li>"border-(insert side here)-color" will change the color of the border on that specific side.</li>
+
+            <li>"border-style" is a property that is used to designate the style of the border, like if you want it "solid" or not.</li>
+
             <li>"border-collapse" sets whether or not cells with in a table have their own borders or share them. The value "collapse" will make them share borders, while the value "separate"
               will cause them to have their own borders and a small space in between them.
             </li>
@@ -427,6 +431,10 @@
 
             <li>"font-size" is a property that is used to designate the desired font size for a webpage or selected element. The size can be given in units like pixels (px) or percentage of the
               given element.
+            </li>
+
+            <li>"font-style" is a property that is used to change how the font of a certain region of text looks. For example, you could use it to make the text italicized with
+              "font-style: italic;"
             </li>
 
             <li>"box-sizing" is a property that specifies any box to have a specific value applied to it. Example: "box-sizing: border-box;" corrects the size of the box in the browser to the size of its 
@@ -475,6 +483,16 @@
             <li>"position" tells whether an element should move from its original position either when the page is scrolled through or just passively by default. It can be used to cause an 
               element to "stick" to the top or bottom of the screen when scrolling past the element. For example, you would type this phrase to make it stick at the top of the screen when scrolling
               downwards: "position: sticky;", then "top: 0;". This will make the element stick at the very top of the screen with no gap between it and the edge, hence the "0".
+              <br>
+              Setting "position" to "absolute" allows you to take the element it's being applied to out of the top down rendering order flow and do with it what you want. Elements in html are 
+              rendered in a top-down order, as in, if they are the first elements written in a parent then they will be rendered at the top of the parent. Using "position: absolute;" can change
+              where on the page they appear. This is how the Free Code Cample put it: 
+              <br>
+              Typically, HTML is rendered in a top-down manner. Elements at the top of the code are positioned at the top of the page. However, many times you may want to move the elements to different positions. You can do this with the position property.
+
+Set the position property for the #back-wall element to absolute. An absolute position takes the element out of that top-down document flow and allows you to adjust it relative to its container.
+
+When an element is manually positioned, you can shift its layout with top, left, right, and bottom. Set the #back-wall element to have a top value of 0, and a left value of 0.
             </li>
 
             <li>"!important" is a VALUE that you can give to any property that you can use to make sure a rule is applied to an element regardless of execution order or specificity.
@@ -483,7 +501,18 @@
 
             <li>"top" is a property that allows you to say how close or far you want a child from/to the top of the parent. Example: 
               "top: -2.25rem" will move the child closer to the top of the parent the greater the size of the negative number, while a positive number will do the opposite.
-              There are other properties that are just like this but they have to do with each respective side of the screen and are named accordingly.
+              There are other properties that are just like this but they have to do with each respective side of the screen and are named accordingly. If you use a percentage with this 
+              property, it will interpret the percentage as meaning "10% from the top of the parent element", and that's the same with all other "side designating properties".
+            </li>
+
+            <li>"vertical-align" is a property that is used to move a child element up or down within the parent element. For example it can be used to place text at the top of the parent
+              with this: "vertical-align: top;". 
+              <br>
+              There is no "horizontal-align"?
+            </li>
+
+            <li>"z-index" is a property that is used to create layers for your HTML elements. I.e. a "vertical axis" by which they can be aligned, think z-axis like in math. 
+              Elements with a higher "z-index" value will appear to be layered on top of other elements.
             </li>
 
         </ul>
@@ -610,6 +639,19 @@
        class is "total". The second will select "tr" elements where the class includes "total".
         </li>
 
+        <li><a href="https://www.w3schools.com/cssref/css_selectors.php">More CSS selector notations can be found here.</a>Many of these selector notations are for selecting multiple elements
+        or selecting elements based on their classes or id's.</li>
+
+        <li>Selecting an element with a certain class that is its self inside a child element can take the form of something like this: "parent.parentclass child .child'sChildclass". 
+          Here is the example used in the FreeCodeCamp course: 
+          <br>
+          "Create a tr.data th .description selector to target the elements with the class set to description that are within your th
+           elements in your .data table rows. Give them a block display, make the text italic with a normal weight, and position them with a padding set to 1rem 0 0.75rem and a right margin of
+            -13.5rem.""
+        </li>
+
+
+
       </ul>
 
       <h4>Pseudo-selectors</h4>
@@ -639,6 +681,8 @@
         <li>":last-of-type" is a pseudo-selector that is used to target the last child in a parent element.</li>
 
         <li>":first-of-type" is a pseudo-selector that is used to target the first child in a parent element.</li>
+
+        <li>":nth-of-type()" is a psuedo-selector that is used to target specific child elements within the parent based on their order among siblings of the same type.</li>
 
         
 
