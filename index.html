@@ -32,7 +32,7 @@
 
         </ul>
 
-        <h4>HTML Elements</h4>
+        <h4 class="h4-headings">HTML Elements</h4>
 
         <ul>
 
@@ -125,7 +125,7 @@
 
         </ul>
 
-        <h4>HTML Attributes</h4>
+        <h4 class="h4-headings">HTML Attributes</h4>
 
         <ul>
 
@@ -209,7 +209,7 @@
 
         <br>
 
-        <h4>HTML 5 Semantic Tags/Elements</h4> 
+        <h4 class="h4-headings">HTML 5 Semantic Tags/Elements</h4> 
 
         <br>
 
@@ -280,7 +280,7 @@
 
       </ul>
 
-      <h4>CSS Elements (Called Rules), Declarations and Properties</h4>
+      <h4 class="h4-headings">CSS Elements (Called Rules), Declarations and Properties</h4>
 
       
 
@@ -321,7 +321,7 @@
 
         </ul>
 
-          <h4>CSS Properties</h4>
+          <h4 class="h4-headings">CSS Properties</h4>
 
         <p>Properties in CSS are the parts of the CSS rules that make the rule do something. For example, if you wanted to make the background color for some html element black,
           you'd have to use the property "background-color" with in the CSS rule and set the property's value to black.</p>
@@ -441,6 +441,8 @@
 
             <li>"box-sizing" is a property that specifies any box to have a specific value applied to it. Example: "box-sizing: border-box;" corrects the size of the box in the browser
                to the size of its borders, excluding the padding and thickness of the border.
+               <br>
+               You can extend this "box-sizing" property to all elements with "* {box-sizing: inherit;}". This makes it so the element inherits the display value of its parent.
             </li>
 
             <li>"font-weight" refers to the boldness of an element's text.</li>
@@ -517,9 +519,18 @@ When an element is manually positioned, you can shift its layout with top, left,
               Elements with a higher "z-index" value will appear to be layered on top of other elements.
             </li>
 
+            <li>"float" is a property that is used to move an element to the right or left of another element while making the other element wrap around it. The values that can be used 
+              with this property are "left", "right", "none", "inherit". With "none", the element doesn't float, as in it will be displayed just as it occurs in the text or in relation to the 
+              other elements in the parent.
+            </li>
+
+            <li>"content" is used to create or override the content of an element. Using this with pseudo-selectors ensures that they are rendered to the page but still empty if you give them
+              "content: "" " as the property's value. Otherwise the pseudo-element will not be rendered to the page. Doing this with the "content" property ensures their rendering with no content.
+            </li>
+
         </ul>
 
-        <h4>At-rules</h4>
+        <h4 class="h4-headings">At-rules</h4>
 
         <ul>
 
@@ -536,7 +547,7 @@ When an element is manually positioned, you can shift its layout with top, left,
 
         </ul>
       
-        <h4>CSS Color Methods</h4>
+        <h4 class="h4-headings">CSS Color Methods</h4>
 
         <p>There are various ways to implement colors into your website with CSS. You can use the rgb/rgba value scheme, hex colors, hsl/hsla color functions, the hwb color function, named colors
           and transparent keywords. For better information refer to the projects in the feecodecamp css module "CSS Color Markers" steps 50 and onwards. </p>
@@ -579,7 +590,7 @@ When an element is manually positioned, you can shift its layout with top, left,
 
         </ul>
 
-      <h4>CSS functions</h4>
+      <h4 class="h4-headings">CSS functions</h4>
 
       <p>A CSS function is used within a property and is used to affect the way the value is displayed by the CSS property. For example: 'linear-gradient' is a function that can 
         be used with the property 'background' to change how the colors are displayed in the background of the element. It creates a spectrum from one color to the other and can only be used
@@ -605,7 +616,7 @@ When an element is manually positioned, you can shift its layout with top, left,
 
       </ul>
 
-      <h4>CSS selectors</h4>
+      <h4 class="h4-headings">CSS selectors</h4>
 
         <p>Selectors are basically just stating the tag of the html elements that you're targeting over again. Unless they are class, id, "*", or others.</p>
 
@@ -625,6 +636,8 @@ When an element is manually positioned, you can shift its layout with top, left,
           <br>
           To target a specific element and the rest of the elements in a parent with a CSS rule at the same time you can use something like this: "footer, footer a". Where "footer" is the parent
           and "a" is a specific child of that element. 
+          <br>
+          To target all elements, including psuedo-selectors you can use something like this: "*, ::pseudoA, ::pseudoB"
         </li>
 
         <li>To target any child element with a certain attribute, regardless of the attributes value you can use this syntax: "#years span[class]{}". The "span" is the type of element being targeted,
@@ -639,6 +652,9 @@ When an element is manually positioned, you can shift its layout with top, left,
       <br>
       The key difference between "tr[class="total"]"" and "tr.total" is that the first will select "tr" elements where the only
        class is "total". The second will select "tr" elements where the class includes "total".
+        </li>
+
+        <li>Targeting elements with a one or more classes and using that same CSS rule to create/affect a psuedo element is done with this notation: ".class.class2::psuedoSelector{;}"
         </li>
 
         <li><a href="https://www.w3schools.com/cssref/css_selectors.php">More CSS selector notations can be found here.</a>Many of these selector notations are for selecting multiple elements
@@ -656,7 +672,7 @@ When an element is manually positioned, you can shift its layout with top, left,
 
       </ul>
 
-      <h4>Pseudo-selectors</h4>
+      <h4 class="h4-headings">Pseudo-selectors</h4>
 
       <p>A pseudo-selector is a keyword that specifies a certain state that the selected element can be in. For example, when a user hovers their mouse over a link that link can change color.
         The mouse hovering over the link is the state that is being reffered to, when it is in that state (possibly about to be selected) it changes color but only then for that specific
@@ -671,13 +687,17 @@ When an element is manually positioned, you can shift its layout with top, left,
 
         <li>":visited" is the pseudo-selector that can be used to make a link change color after you've used it.</li>
 
-        <li>":after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery:after {}" is how you use it.</li>
+        <li>":after" is a psuedo-selector that creates an element that is the last child of the selected element. Example: ".gallery:after {}" is how you use it. When this psuedo-selector 
+          is used it will create an empty pseudo-element that will not be shown in the webpage by default. If you want to be able to see the element then use the "content" property to make it
+          show. If you want to keep the psuedo-element created by the psuedo-selector empty, then you can use the value of "" for the "content" propterty.
+        </li>
 
         <li>":not" is a psuedo-selector that can be used to select all elements that don't correspond with a certain Id or class attribute. Ex: "div:not(#example) {}" will apply the css 
           properties the css rule contains to any element that doesn't have an Id of "example". </li>
 
         <li>":before" is a pseudo-selector that can be used to create a pseudo-element that is the FIRST child of the selected element. It's mainly used to add cosmetic content to an element
-          by using the "content" property. This pseudo-element that is created is in-line by default.
+          by using the "content" property. This pseudo-element that is created is in-line by default. This pseudo-selector creates a psuedo-element that, by default, won't be rendered to the page.
+          If you wish to render the psuedo-element to the page, then use the "content" property. Give the "content" property a value of "" if you wish for the psuedo-element to remain empty.
         </li>
 
         <li>":last-of-type" is a pseudo-selector that is used to target the last child in a parent element.</li>
@@ -720,7 +740,7 @@ When an element is manually positioned, you can shift its layout with top, left,
 
         <br>
 
-        <h4>Git Work Flow Commands In Order</h4>
+        <h4 class="h4-headings">Git Work Flow Commands In Order</h4>
 
       <ol>
 
@@ -844,6 +864,8 @@ When an element is manually positioned, you can shift its layout with top, left,
 
       </div>
 
+     
+
       <br>
 
 
@@ -869,7 +891,23 @@ When an element is manually positioned, you can shift its layout with top, left,
 
       <br>
 
-    </section>    
+    </section>  
+    
+    <br>
+
+    <section class="card" id="Miscellaneous Notes">
+
+      <h2>Miscellaneous Notes</h2>
+
+      
+
+        <li>When dealing with images and you use the "width" CSS property, you don't really have to use anything else because the image will change to maintain its aspect ratio(?).</li> 
+
+
+      
+
+    </section>
+
     </main>
 
     <footer>
