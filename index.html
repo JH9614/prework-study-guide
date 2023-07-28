@@ -123,6 +123,10 @@
 
           <li>"i" is used to make text idiomatic (separated from normal text). This could be used for italic text like scientific terms, or for icons.</li>
 
+          <li>"code" is the tag for the "code" element and is used to assist in writing text that deals with computer code. If you use the "code" element, the text will display as a snippet
+            of computer code rather than just general text.
+          </li>
+
         </ul>
 
         <h4 class="h4-headings">HTML Attributes</h4>
@@ -530,13 +534,13 @@ When an element is manually positioned, you can shift its layout with top, left,
 
         </ul>
 
-        <h4 class="h4-headings">At-rules</h4>
+        <h4 class="h4-headings">At-rules/Media queries/Logicial operators</h4>
 
         <ul>
 
-          <li>"@media" is an at-rule that has a feature called "prefers-reduced-motion" which is used to modify CSS rules based on the user's preferences. It takes one of the following values:
-            "reduce", and "no-preference". It is wrapped around an existing selector with the existing selector sort of functioning like the declaration part of the rule (property and property
-            value). Example: 
+          <li>"@media" is a media condition that is also an at-rule that has a feature called "prefers-reduced-motion" which is used to modify CSS rules based on the user's preferences.
+             It takes one of the following values:"reduce", and "no-preference". It is wrapped around an existing selector with the existing selector sort of functioning like the declaration
+              part of the rule (property and property value). Example: 
             <br>
             "@media (feature: value) {
               selector {
@@ -545,7 +549,28 @@ When an element is manually positioned, you can shift its layout with top, left,
             }"
 
             This at-rule is used to conditionally apply CSS. It is known as a media query. Media queries are usually used to apply CSS based on the viewport width using the "max-width" and 
-            "min-width" properties
+            "min-width" properties.
+            <br>
+            In the below example the padding is applied to the .card class when the viewport is 960px wide and below.
+
+            @media (max-width: 960px) {
+              .card {
+                padding: 2rem;
+              }
+            }
+
+          </li>
+
+          <li>"and" is a logical operator that can be used to "query" two media conditions. Here is an example with the FreeCodeCamp's explanation:
+            <br>
+            Logical operators can be used to construct more complex media queries. The and logical operator is used to query two media conditions.
+
+For example, a media query that targets a display width between 500px and 1000px would be:
+
+@media (min-width: 500px) and (max-width: 1000px){
+
+}
+Add another @media rule to apply if the browser window is wider than 769px but smaller than 1199px.
           </li>
 
         </ul>
