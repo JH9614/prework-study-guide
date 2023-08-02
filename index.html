@@ -532,6 +532,10 @@ When an element is manually positioned, you can shift its layout with top, left,
               "content: "" " as the property's value. Otherwise the pseudo-element will not be rendered to the page. Doing this with the "content" property ensures their rendering with no content.
             </li>
 
+            <li>"box-sizing" is a property that can be used to affect the size of an element. When using "box-sizing" with the value "border-box" you make it so the border thickness doesn't effect
+              the size of the element.
+            </li>
+
         </ul>
 
         <h4 class="h4-headings">At-rules/Media queries/Logicial operators</h4>
@@ -639,8 +643,25 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           This is good for running a webpage on multiple types of devices with different screen sizes because it automatically adjusts the elements to take up a set amount ("2px" or whatever) 
           of horizontal (only the case for this application) of the parent element.
         </li>
+        <br>
+        <h4 class="h4-headings">CSS Variables</h4>
 
-        
+        <p>Variables always begin with two dashes and are given a name and value like this: "--variable-name: value;". Variables are placed within rules just like anyother property and can also
+          be used as the values of other properties. Here is an example of one being applied: <code>background-color: var(--building-color1)</code> Note that there is no need for a semi colon at
+          the end. In order for a variable to be used like this however, it needs to have been declared elsewhere as something like this: <code>--building-color1: #999;</code> this way when it
+          is applied to another rule or property it already has a value so it works.
+          <br>
+          If you change the value of the variable where it is first declared, then it affects the rest of the places it is implemented."
+          <br>
+          If the variable doesn't work right away, you can give it a fallback value like green (doesn't need to be with colors of course). You just need to add a comma and a space between it
+           and the variable name that is already in the parenthesis, like this: "someProperty: var(--variable-name, green);"
+        </p>
+
+        <ul>
+
+          <li></li>
+
+        </ul>
 
       </ul>
 
@@ -932,6 +953,32 @@ Add another @media rule to apply if the browser window is wider than 769px but s
         <li>When dealing with images and you use the "width" CSS property, you don't really have to use anything else because the image will change to maintain its aspect ratio(?).</li> 
 
         <li>"position" is a CSS property that can be set to "relative" to make the original position of the affected element a point of reference for any changes.</li>
+
+        <li>If you have trouble finding where and element is and what size it is, just set it's border to 1px solid black.</li>
+
+        <li>To make the body element fill the whole html parent you can use css that looks like this: 
+          <code>
+          body {
+            height: 100vh;
+            margin: 0;
+            overflow: hidden;
+          }
+          </code>
+          <br>
+          If you want any element to fill the whole parent use this: 
+          <code>
+          .background-buildings {
+            width: 100%;
+            height: 100%;
+          }
+          </code>
+        </li>
+
+        <li>To align items along the bottom of a parent that has been declared a flex container, use "align-items: flex-end;". Then if you want them evenly spaced, use
+          "justify-content: space-evenly;".
+        </li>
+
+
 
 
       
