@@ -546,12 +546,14 @@ When an element is manually positioned, you can shift its layout with top, left,
              It takes one of the following values:"reduce", and "no-preference". It is wrapped around an existing selector with the existing selector sort of functioning like the declaration
               part of the rule (property and property value). Example: 
             <br>
+            <code>
             "@media (feature: value) {
               selector {
                 styles
               }
             }"
-
+            </code>
+            <br>
             This at-rule is used to conditionally apply CSS. It is known as a media query. Media queries are usually used to apply CSS based on the viewport width using the "max-width" and 
             "min-width" properties.
             <br>
@@ -570,11 +572,12 @@ When an element is manually positioned, you can shift its layout with top, left,
             Logical operators can be used to construct more complex media queries. The and logical operator is used to query two media conditions.
 
 For example, a media query that targets a display width between 500px and 1000px would be:
-
+<code>
 @media (min-width: 500px) and (max-width: 1000px){
 
 }
 Add another @media rule to apply if the browser window is wider than 769px but smaller than 1199px.
+</code>
           </li>
 
         </ul>
@@ -616,6 +619,16 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             Adding this extra "a" to the end of rgb adds a decimal value (that's equivalent to a percentage value) to the end of the function. Example: (0, 0, 0, 0.5). This can be used with
             hsl and hex colors (just adds another pair of figures to the end of a hex value just like the rest).
 
+          </li>
+
+          <li>Gradients are a way to transition between colors across the distance of an element. In other words a gradient creats a spectrum from one color to another within the bounds of an 
+            element. They are applied to the "background" property and the syntax looks like this:
+            <code>
+            gradient-type(
+  color1,
+  color2
+);
+            </code> 
           </li>
 
 
@@ -715,6 +728,10 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           "Create a tr.data th .description selector to target the elements with the class set to description that are within your th
            elements in your .data table rows. Give them a block display, make the text italic with a normal weight, and position them with a padding set to 1rem 0 0.75rem and a right margin of
             -13.5rem.""
+        </li>
+
+        <li>":root" is the most important selector, i.e. it is the selector that is always first in the order of operations for the webpage. Placing things like variable declarations There
+          will allow them to "cascade" (be used in) into other CSS rules and properties.
         </li>
 
 
