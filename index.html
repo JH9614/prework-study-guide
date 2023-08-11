@@ -1093,13 +1093,25 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
       <h4>jQuery notes</h4>
 
-      <p>jQuery is a JavaScript library that makes everything about using JS easier including AJAX. It has a simple to use API that works across a multitude of browsers. </p>
+      <p>jQuery is a JavaScript library that makes everything about using JS easier including AJAX. It has a simple to use API that works across a multitude of browsers. 
+        <br>
+        jQuery functions often select a specific element with a "selector" and then do things to that element. For example, to make a button(s) bounce, you can use the function 
+        "$("button").addClass("animated bounce");". Note that the "button" element was mentioned in the first section of the function, also note the use of camel case in the middle of the function
+        and that there was no dash between the words "animated" and "bounce". Also note that the camel case piece is the ".addClass()" function, so we added CSS classes to the respective element(s)
+        as well.
+      </p>
 
       <li>All jQuery functions start with an "$". Usually this is referred to the "dollar sign operator" or "bling".</li>
 
       <li>"$(document).ready(function()) {});" is a jQuery function that prevents any JS code from being executed before the web page is ready/fully rendered, hense the "document" and "ready".</li>
 
-      <li></li>
+      <li>".addClass()" is a jQuery function that adds CSS class(es) to any applied elements.</li>
+
+      <li>Note that when classes are targeted they start with a period just like in CSS.</li>
+
+      <li>Another example of a jQuery function would be "$(".well").addClass("animated shake");" which targets all elements with the class "well" and adds the CSS classes "animated" and "shake"
+        with the ".addClass()" function.
+      </li>
 
     </section>
 
