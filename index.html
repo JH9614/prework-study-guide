@@ -52,8 +52,8 @@
 
           <li>"table" is the tag that is used to create a table feature in the web page. It has multiple distinct sub tags related to it.
             Two of those being the "thead", "/thead" and the "tbody", "/tbody". These are used to create the head and body of the table feature respectively.
-            Sub to the previous two are the "tr", "/tr" the "th", "/th" and the "td", "/td". The "tr" is to create each individual row for the table. 
-            The "th" is to create the headding for each column in the table. And finally "td" is to create the spot where the actual data goes (it stands for "table data").
+            Sub to the previous two are the "tr", "/tr" the "th", "/th" and the "th", "/th". The "tr" is to create each individual row for the table. 
+            The "th" is to create the headding for each column in the table. And finally "th" is to create the spot where the actual data goes (it stands for "table data").
           </li>
 
           <li>"form" is the tag that is used to create spaces where the webpage can ask users for information and the users can interact with the page by providing said information.
@@ -117,7 +117,7 @@
             element.
           </li>
 
-          <li>"td" is the element that creates a data cell within the "tr" element, so naturally it is a child of the "tr" element when in application.</li>
+          <li>"th" is the element that creates a data cell within the "tr" element, so naturally it is a child of the "tr" element when in application.</li>
 
           <li>"th" is the element that creates a header cell for each data cell.</li>
 
@@ -819,7 +819,7 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
         <li>"git pull origin main": syncs the local branch you are working on with the remote branch of the same name on github. 
           It is always important to do a pull before you "push" the code into the branch of the remote repository on github. 
-          If you don't sync the branches you may be working on outdated code.</li>
+          If you don't sync the branches you may be working on outhated code.</li>
 
         <li>"git push origin "branch/name"": this "pushes" the changes we made to the remote branch so it has a copy of what the file looks like now, replacing the old one.</li>
 
@@ -855,16 +855,73 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
         <li>"strings" are a collection of text symbols/characters. These collections of characters cannot be used to perform mathematical operations, but singularly function as textual data.
           Strings must be denoted by beginning and ending the phrase/data with sets of double or single quotation marks. To use a literal quote in a string, place back slashes in front of the
-          quotation marks associated with the quote so that the computer doesn't confuse the quote's quotation marks as the beginning or ending of the string its self. For example:
+          quotation marks associated with the quote so that the computer doesn't confuse the quote's quotation marks as the beginning or ending of the string its self. But this only applies
+          to strings that use the same types of quotes at the begining and end and again in the middle. For example:
           <br>
           <code>const sampleStr = "Alan said, \"Peter is learning JavaScript\".";</code>
           <br>
           The back slash is just under the "backspace" button on the keyboard of your laptop.
           <br>
+          The back slash being used inside of a string for continuity's sake is what's called an escape character. "Escape" as in it escapes a problem that would throw an error when the code is
+          run.
         </li>
 
         <li>Single and double quotes work the same in JS so you can use them together. This makes it difficult to use apostrophies and the quote signs. To be able to use apostrophies and quotes
-          you simply place a forward slash infront of the apostrophy.
+          you simply place a back slash infront of the apostrophy as an escape character.
+        </li>
+
+        <li>"escape characters" can be set up in "escape sequences" such as these: 
+          <br>
+          <table id="table">
+            <tr>
+              <thead>
+                <th></th>
+                <th>Code and</th>
+                <th>Output</th>
+              </thead>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\'</td>
+              <td>single quote</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\"</td>
+              <td>double quote</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\\</td>
+              <td>back slash</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\n</td>
+              <td>new line</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\t</td>
+              <td>tab</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\r</td>
+              <td>carriage return</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\b</td>
+              <td>back space</td>
+            </tr>
+            <tr>
+              <td></td>
+              <td>\f</td>
+              <td>form feed</td>
+            </tr>
+          </table>
+          <br>
         </li>
 
         <li>Assigning value to a variable is done with a logical operator, namely "=". You can assign a value to a variable right after it is declared so that when ever the variable appears
@@ -978,17 +1035,17 @@ myNum = myVar;
 
             <tr>
 
-              <td>Josh</td>
-              <td>bobfink123@gmail.com</td>
-              <td>27</td>
+              <th>Josh</th>
+              <th>bobfink123@gmail.com</th>
+              <th>27</th>
 
             </tr>
 
             <tr>
 
-              <td>Jay</td>
-              <td>something@email.com</td>
-              <td>30</td>
+              <th>Jay</th>
+              <th>something@email.com</th>
+              <th>30</th>
 
             </tr>
 
