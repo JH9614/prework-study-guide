@@ -924,6 +924,29 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           <br>
         </li>
 
+        <p>Using the above characters in the proper sequences will cause the textual data within the string to return in a certain manner. For example, if you imbed the "\n" with in the string
+          its self then it will return with a break in the string and everything after the "\n" will be on the next line down. If you use the "\n" and "\t" together (use them one after another
+          with no spaces) your string will return as everything after the "\n" being on the next line but also indented thanks to the "\t" (the "t" is for "tab").
+        </p>
+        <br>
+        <li>"concatination" is when you "add" two or more strings (or other data types) together such that the symbols that represent the data are put together into one piece of data. For example,
+          if you concatinate two strings like "one" and "two", the concatination of those two strings will be "onetwo". 
+          <br>
+          Notice that absence of space between them, this is caused by the lack of a space 
+          being present in either string.
+          <br>
+          A simple concatination would look like this: <code>const myStr = "This is the start. " + "This is the end."</code>
+          <br> 
+          Which would look like this when run: 
+          <code>"This is the start. This is the end."</code>
+          <br>
+          Another logical operator that can be used to concatinate strings is "+=", which would look like this: 
+          <code>let myStr = "This is the first sentence. "
+                myStr += "This is the second sentence."
+          </code>
+          Which returns those two strings concatinated.
+        </li>
+
         <li>Assigning value to a variable is done with a logical operator, namely "=". You can assign a value to a variable right after it is declared so that when ever the variable appears
           after it's declared it will be treated as that particular value. As in, if you give a variable the value of 7 then it will be treated as the numerical value of 7.
           <br>
