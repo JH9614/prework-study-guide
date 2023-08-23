@@ -947,6 +947,18 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           Which returns those two strings concatinated.
         </li>
 
+        <li>Constructing strings with variables is done by assigning a value to a variable and using it like a mathematical variable in a mathematical expression where the numbers are strings.
+          For example, if you assign a value of "Josh" to an arbitrary vaiable like "myName" and then create another variable "myStr" you can use the format below to concatinate the multiple 
+          strings together.
+          <br>
+          <code>
+            const myName = "Josh";
+            const myStr = "My name is " + myName + " and I am well!";
+          </code>
+          <br>
+          Thusly outputting  "My name is Josh and I am well!"
+        </li>
+
         <li>Assigning value to a variable is done with a logical operator, namely "=". You can assign a value to a variable right after it is declared so that when ever the variable appears
           after it's declared it will be treated as that particular value. As in, if you give a variable the value of 7 then it will be treated as the numerical value of 7.
           <br>
@@ -954,9 +966,9 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           <br>
           <code>
           var myVar;
-myVar = 5;
-var myNum;
-myNum = myVar;
+          myVar = 5;
+          var myNum;
+          myNum = myVar;
           </code>
           <br>
           It is also common to "initialize" a variable by declaring it and giving a value of 0. That way you can use commands to change its value later and not have to go back through and declare
@@ -987,7 +999,7 @@ myNum = myVar;
 
       </ul>
 
-      <h4>Numbers in and logical operators JS</h4>
+      <h4>Numbers and logical operators JS</h4>
 
       <p>Numbers and their operators such as the addition sign and the multiplication sign ("*") are treated as they are in arithmetic0. There are also different uses for the mathematical 
         symbols than just math with in JS.
