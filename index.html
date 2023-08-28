@@ -847,6 +847,9 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           All variables and function names are case sensitive.
         </li>
 
+        <li>
+        </li>
+
         <li>Once a variable has been declared with a declaration keyword, then the variable its self is only needed in any following statments. As in you don't have to keep using "let" or 
           "const" or whatever.
         </li>
@@ -1012,7 +1015,62 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           This code will return the length of the string "Lovelace" in a nuemerical format as being the new value of the variable "lastNameLength".
         </li>
 
-        <li></li>
+        <li>If you want to concatinate a set of words into a meaningful sentence, make sure to add empty quotes with a space in them like this: " " so the words can have spaces between them.</li>
+
+        </ul>
+        <br>
+
+        <h4>JS functions</h4>
+
+        <ul>
+
+          <li>".push()" is a JS function that can be used to append data to the end of an array. For example: 
+            <br>
+            <code>
+              const arr1 = [1, 2, 3];
+              arr1.push(4);
+
+              const arr2 = ["Stimpson", "J", "cat"];
+              arr2.push(["happy", "joy"]);
+            </code>
+            <br>
+            arr1 now has the value [1, 2, 3, 4] and arr2 has the value ["Stimpson", "J", "cat", ["happy", "joy"]].
+          </li>
+
+          <li>".pop()" is another function that is used with arrays. It is used to remove a value from the end of an array (it "pops" it off). This value/data piece can then be stored in 
+            another variable. This is how it is used:
+            <br>
+            <code>
+              const threeArr = [1, 4, 6];
+              const oneDown = threeArr.pop();
+              console.log(oneDown);
+              console.log(threeArr);
+            </code>
+            <br>
+            The first console.log will display the value 6, and the second will display the value [1, 4]. So you are reassigning the value of the original array to include less data than it 
+            started with.
+          </li>
+
+          <li>"shift()" is another function for dealing with arrays. Instead of affecting the last value of an array, it affects the first, like so:
+            <br>
+            <code>
+              const ourArray = ["Stimpson", "J", ["cat"]];
+              const removedFromOurArray = ourArray.shift();
+            </code>
+            <br>
+            The removedFromOurArray variable would have a value of the string Stimpson, and ourArray would have ["J", ["cat"]].
+          </li>
+
+          <li>".unshift" does the exact opposite to ".shift()". For example:
+            <br>
+            <code>
+              const ourArray = ["Stimpson", "J", "cat"];
+              ourArray.shift();
+              ourArray.unshift("Happy");
+            </code>
+            <br>
+            After the shift, ourArray would have the value ["J", "cat"]. After the unshift, ourArray would have the value ["Happy", "J", "cat"].
+          </li>
 
         </ul>
 
@@ -1138,6 +1196,64 @@ Add another @media rule to apply if the browser window is wider than 769px but s
         </li>
 
       </ul>
+      <br>
+
+      <h4>Arrays</h4>
+      <br>
+        <ul>
+
+          <li>"Arrays" are types of variables that can store more than one data type. They utilize the "index" notation so that you can pick and choose which piece or type of data you wish to use 
+            from it. You can also nest arrays within arrays like this:
+            <br>
+            <code>
+              const teams = [["Bulls", 23], ["White Sox", 45]];
+            </code>
+            <br>
+            You can set other variables equal to a piece of data within an array by declaring the new variable and then setting it equal to the array's name with brackets containing the data's 
+            index placement. Like so: 
+            <br>
+            <code>
+              const teams = [["Bulls", 23], ["White Sox", 45]];
+              const team = teams[0];
+            </code>
+            The above code will return the value of "Bulls"
+            <br>
+            Values in an array are mutable as apposed to immutable like strings are. So at any point in time any value of any spot within the index of an array can be reassigned a new value. For example: 
+            <br>
+            <code>
+              const ourArray = [50, 40, 30];
+              ourArray[0] = 15;
+            </code>
+            <br>
+            The above code will reassign 15 to the zeroeth spot.
+          </li>
+
+          <li>"Multi-Dimensional arrays" are arrays that contain other arrays like above. Here is another example:
+            <br>
+            <code>
+              const arr = [
+                [1, 2, 3],
+                [4, 5, 6],
+                [7, 8, 9],
+                [[10, 11, 12], 13, 14]
+              ];
+            </code>
+            <br>
+            And this is how that is read:
+            <br>
+            <code>
+              const subarray = arr[3];
+              const nestedSubarray = arr[3][0];
+              const element = arr[3][0][1];
+            </code>
+            <br>
+            In this example, subarray has the value [[10, 11, 12], 13, 14], nestedSubarray has the value [10, 11, 12], and element has the value 11 . Note that there can be no spaces between 
+            the naming of an array and its brackets or spaces between the brackets as in the second section of the example.
+            <br>
+            Each indexed item within an array is referred to as an "element".
+          </li>
+
+        </ul>
      
     </section>
 
