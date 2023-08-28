@@ -847,6 +847,10 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           All variables and function names are case sensitive.
         </li>
 
+        <li>Once a variable has been declared with a declaration keyword, then the variable its self is only needed in any following statments. As in you don't have to keep using "let" or 
+          "const" or whatever.
+        </li>
+
         <li>Control flow refers to how the code we input is executed by the computer. 
           For JS the control flow is top to bottom and for multi faceted variables, functions, objects, arrays and the like, it is executed left to right.
         </li>
@@ -864,6 +868,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           <br>
           The back slash being used inside of a string for continuity's sake is what's called an escape character. "Escape" as in it escapes a problem that would throw an error when the code is
           run.
+          <br>
+          String values cannot be changed once created and so are referred to as being immutable.
         </li>
 
         <li>Single and double quotes work the same in JS so you can use them together. This makes it difficult to use apostrophies and the quote signs. To be able to use apostrophies and quotes
@@ -986,7 +992,13 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           a new variable.
         </li>
 
-        <li>The length of a string can be found using the ".length" property. For example:
+      </ul>
+
+      <h4>JS properties</h4>
+
+        <ul>
+
+        <li>".length". The length of a string can be found using the ".length" property. For example:
           <br>
           <code>
             // Setup
@@ -997,10 +1009,51 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             lastNameLength = lastName.length;
           </code>
           <br>
-          This code will return the length of the string "Lovelace" in a nuemerical format.
+          This code will return the length of the string "Lovelace" in a nuemerical format as being the new value of the variable "lastNameLength".
         </li>
 
-      </ul>
+        <li></li>
+
+        </ul>
+
+        <h4>JS notations</h4>
+
+        <ul>
+
+          <li>"Bracket notation" is a way to get a specific character at a certain index within a string. Note that most index notations start by counting from zero note one as is the case 
+            with JS. Here is an example of bracket notation being used to specify a certain character within a string: 
+            <br>
+            <code>
+              const firstName = "Charles";
+              const firstLetter = firstName[0];
+            </code>
+            <br>
+            This will return the first letter in the string since the index number zero is being specified as the target. As strings are immutable, they cannot be changed by methods that attempt 
+            to use the bracket notation to specify a certain character at that index that you would like to change. For example: 
+            <br>
+            <code>
+              let myStr = "Bob";
+              myStr[0] = "J";
+            </code>
+            <br>
+            However since the "let" variable declaration was used here the value of the variable its self can be reasssigned by just redeclaring it like this:
+            <br>
+            <code>
+              let myStr = "Bob";
+              myStr = "job";
+            </code>
+            <br>
+            You can also find the last character in any string, regardless of length, by simply using the following bracket notation:
+            <br>
+            <code>
+              const variable = "xyz";
+              const variableTwo = variable[variable.length - 1];
+            </code>
+            <br>
+            The above code will return the last letter because the total length of the string is always +1 compared to the index values (because the index for each string starts at zero).
+          </li>
+
+        </ul>
 
       <br>
 
