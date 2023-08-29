@@ -1299,6 +1299,28 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             That will return the value of 3 in the terminal window.
           </li>
 
+          <li>"return" is a statement that can only be used within functions. With the earlier example, the values were "plugged in" like with a math equation, but with "return" the values inputed
+            don't remain there so the next time you call the function you have to reenter those values or you just enter new ones. When it is implemented the execution of the function is stopped, For example: 
+            <br>
+            <code>
+              function plusThree(num) {
+                return num + 3;
+              }
+              
+              const answer = plusThree(5);
+            </code>
+            <br>
+            answer has the value 8. plusThree takes an argument for num and returns a value equal to num + 3.
+            <br>
+            In a plain function, the call to that function evaluates to the return value.
+            <br>
+            In an async function, the produced promise is resolved with the returned value.
+            <br>
+            In a generator function, the produced generator objext's "next()" method returns a promise fulfilled with { done: true, value: returnedValue }. 
+            <br>
+            If a "return" statement is executed within a "try" block, its "finally" block, if present, is first executed, before the value is actually returned.
+          </li>
+
         </ul>
      
     </section>
