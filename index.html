@@ -858,6 +858,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           <br>
           The myTest() function call will display the string foo in the console. The console.log(loc) line (outside of the myTest function) will throw an error,
           as loc is not defined outside of the function.
+          <br>
+          Locally declared variables will also take presendence over globally declared variables.
         </li>
 
         <li>A variable is a named container that allows us to store data in our code. They use "labels" to point to the data rather than using the data its self. Any of the eight data types 
@@ -1093,6 +1095,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             <br>
             After the shift, ourArray would have the value ["J", "cat"]. After the unshift, ourArray would have the value ["Happy", "J", "cat"].
           </li>
+
+          <li></li>
 
         </ul>
 
@@ -1351,6 +1355,22 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             If a "return" statement is executed within a "try" block, its "finally" block, if present, is first executed, before the value is actually returned.
           </li>
 
+          <li>A function can include a "return" statement but it doesn't have to. If the function doesn't have the "return" statement, then after processing the inner code of the function
+            it will return undefined. (NOTE THAT THE CODE BELOW CHANGES THE GLOBAL "SUM" VARIABLE'S VALUE) Example: 
+            <br>
+            <code>
+              let sum = 0;
+
+              function addSum(num) {
+                sum = sum + num;
+              }
+
+              addSum(3);
+            </code>
+            <br>
+            addSum is a function without a return statement. The function will change the global sum variable but the returned value of the function is undefined.
+          </li>
+
         </ul>
 
         
@@ -1601,6 +1621,10 @@ Add another @media rule to apply if the browser window is wider than 769px but s
         <li>It's common for devs to use uppercase variable identifiers for immutable or unchangeable values and lowercase/camelCase for mutable/changeable values (objects or arrays).</li>
 
         <li>When using camelCase, make sure to all the letters in an akronim, none of them can be lowercase. This is what's called "Best Practices".</li>
+
+        <li>"Queue" is a data science term that refers to an abstract data structure where items are kept in order. You can take old items off of the front of the queue and add new ones 
+          to the back of the queue.
+        </li>
 
     </section>
 
