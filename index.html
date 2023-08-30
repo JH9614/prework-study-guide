@@ -839,6 +839,27 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
         <li>JavaScript is also the code that links the front end to the back end (I think).</li>
 
+        <li>"Scope" refers to a variable's "visibility". Variables which are defined outside of a function block have "global" scope, meaning they can be seen anywhere in your script. 
+          Variables declared without using the let/var/const keywords are automatically created in the global scope even if they're within a function(?). Always use declaration keywords when
+          declaring a variable. 
+          <br>
+          Variables declared within a function have "local" scope, same as function parameters, meaning they're only visible wihtin the function. Thusly you can't call a local variable, you have
+          to call it's function to utilize its value. If you try using "console.log(localVariable)" it will throw an error such as "localVariable" is not defined. For example:
+          <br>
+          <code>
+            function myTest() {
+              const loc = "foo";
+              console.log(loc);
+            }
+            
+            myTest();
+            console.log(loc);
+          </code>
+          <br>
+          The myTest() function call will display the string foo in the console. The console.log(loc) line (outside of the myTest function) will throw an error,
+          as loc is not defined outside of the function.
+        </li>
+
         <li>A variable is a named container that allows us to store data in our code. They use "labels" to point to the data rather than using the data its self. Any of the eight data types 
           can be stored in a variable. These variables differ from mathematical variables in that they can store different data at different times.
           <br>
@@ -1015,7 +1036,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           This code will return the length of the string "Lovelace" in a nuemerical format as being the new value of the variable "lastNameLength".
         </li>
 
-        <li>If you want to concatinate a set of words into a meaningful sentence, make sure to add empty quotes with a space in them like this: " " so the words can have spaces between them.</li>
+        <li>If you want to concatinate a set of words into a meaningful sentence, make sure to add empty quotes with a space in them like this: " " so the words can have spaces between them.
+        </li>
 
         </ul>
         <br>
@@ -1073,6 +1095,14 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           </li>
 
         </ul>
+
+        <h4>Operators</h4>
+
+        <uL>
+
+          <li>"typeof" is an operator that is used to return a string that states what type of data an operand has. For example, if you used it with the number four, it would return "number".</li>
+
+        </uL>
 
         <h4>JS notations</h4>
 
@@ -1160,20 +1190,20 @@ Add another @media rule to apply if the browser window is wider than 769px but s
       <ul>
 
         <li>
-          "++" is an operator that is used to add one to an existing variable with a numerical value. It looks like this: "i++" which is equivolent to "i = i + 1".
+          "++" is a logical operator that is used to add one to an existing variable with a numerical value. It looks like this: "i++" which is equivolent to "i = i + 1".
         </li>
 
         <li>
-          "--" is just the same as the above operator, but just the opposite as it deals with subtraction.
+          "--" is just the same as the above logical operator, but just the opposite as it deals with subtraction.
         </li>
 
         <li>
-          "%" is the remainder operator. It gives the remainder of the division of two numbers. For example, if you write "5 % 2" it would return 1. If you wrote "5 / 2" then it would return 
-          2 with a remainder of 1. This operator is often referred to incorrectly as the "modulus" operator, it is similar to the modulus operator but cannot handle negative numbers properly.
+          "%" is the remainder logical operator. It gives the remainder of the division of two numbers. For example, if you write "5 % 2" it would return 1. If you wrote "5 / 2" then it would return 
+          2 with a remainder of 1. This operator is often referred to incorrectly as the "modulus" logical operator, it is similar to the modulus logical operator but cannot handle negative numbers properly.
         </li>
 
         <li>
-          " += " is an operator that conducts the addition of two numerical values or strings or what have you and assigns the result of the addition at the same time. You can use this to save 
+          " += " is a logical operator that conducts the addition of two numerical values or strings or what have you and assigns the result of the addition at the same time. You can use this to save 
           alot of typing. For example, instead of writing "myVar = myVar + 5" you can write "myVar += 5" to add five to the value of the variable.
         </li>
 
@@ -1322,6 +1352,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           </li>
 
         </ul>
+
+        
      
     </section>
 
