@@ -1371,6 +1371,30 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             addSum is a function without a return statement. The function will change the global sum variable but the returned value of the function is undefined.
           </li>
 
+          <li>Functions can affect arrays. For example, you can add numbers and remove numbers from an array (the array in this case would be reffered to as a queue). Here:
+            <br>
+            <code>
+              function nextInLine(arr, item) {
+                // Only change code below this line
+                arr.push(6)
+                arr.shift()
+                return item;
+                // Only change code above this line
+              }
+              
+              // Setup
+              let testArr = [1, 2, 3, 4, 5];
+              
+              // Display code
+              console.log("Before: " + JSON.stringify(testArr));
+              console.log(nextInLine(testArr, 6));
+              console.log("After: " + JSON.stringify(testArr));
+            </code>
+            <br>
+            The bottom part is for displaying the output in the terminal window, but the rest is to alter the state of the array. "arr.push(6)" adds a 6 to the end of the array and "arr.shift()"
+            removes the first item from the array.
+          </li>
+
         </ul>
 
         
