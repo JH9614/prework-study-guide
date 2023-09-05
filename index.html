@@ -1376,9 +1376,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             <code>
               function nextInLine(arr, item) {
                 // Only change code below this line
-                arr.push(6)
-                arr.shift()
-                return item;
+                arr.push(6);
+                return arr.shift();
                 // Only change code above this line
               }
               
@@ -1392,7 +1391,9 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             </code>
             <br>
             The bottom part is for displaying the output in the terminal window, but the rest is to alter the state of the array. "arr.push(6)" adds a 6 to the end of the array and "arr.shift()"
-            removes the first item from the array.
+            removes the first item from the array. The actual "passing through" of the values through the parameters happens in the second to last line.
+            The "return arr.shift()" removes the first value from the first index and moves everything down one in thier index values. Then it RETURNS the value
+            that it just removed because it is being told to return it at the very start of that line, hence "return".
           </li>
 
         </ul>
