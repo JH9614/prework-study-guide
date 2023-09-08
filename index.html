@@ -1234,6 +1234,20 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           to one another.
         </li>
 
+        <li>"===" is called the Strict Equality symbol and is the counterpart to the above symbol. This symbol is different because it cannot compare items that are of two different data types (it can't perform "coercion").</li>
+
+        <li>"!=" is the opposite of the equality operator, as in it means "not equal". It returns "false" where equality would return true and so on. It will also convert data types so that it can compare two values.</li>
+
+        <li>"!==" is the Strict Inequality operator, and it is the logical opposite of the Strict Equality Operator. Like the Strict Equality Operator, though, it doesn't convert data types.</li>
+
+        <li>">" is the Greater Than operator and it compares two numerical values. If the number to the left is greater than the one to the right, it returns true.</li>
+
+        <li>">=" is the Greatern Than Or Equal To operator and, again, it only compares the values of two numbers --nothing else.</li>
+
+        <li>"<" is the Less Than operator.</li>
+
+        <li>"<=" is the Less Than Or Equal To operator.</li>
+
       </ul>
       <br>
 
@@ -1409,7 +1423,9 @@ Add another @media rule to apply if the browser window is wider than 769px but s
            }"
             </code>
             <br>
-            The way the "if" statement is executed is enumerated within it like a normal function. Below is an example of a working "if" statement
+            The way the "if" statement is executed is enumerated within it like a normal function. Below is an example of a working "if" statement.
+            <br>
+            Multiple "if" statements can be within the bounds of a single function and those "if" statements don't have to have both returns for true/false, they can have only one if you want it like that.
         </li>
 
         </ul>
@@ -1666,6 +1682,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
         <li>"Queue" is a data science term that refers to an abstract data structure where items are kept in order. You can take old items off of the front of the queue and add new ones 
           to the back of the queue.
         </li>
+
+        <li>"Type Coercion" is when JS must convert one type of data into another. This happens, for example, in order to equate a string "3" with a number 3 in the statement<code> "3" == 3.</code></li>
 
     </section>
 
