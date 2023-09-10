@@ -1248,6 +1248,51 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
         <li>"<=" is the Less Than Or Equal To operator.</li>
 
+        <li>"&&" is a logical operator that returns "true" if and only if the statements to the left and right of it are true. For example: 
+          <br>
+          <code>
+            if (num > 5) {
+              if (num < 10) {
+                return "Yes";
+              }
+            }
+            return "No"; 
+          </code>
+          <br>
+          <code>
+            if (num > 5 && num < 10) {
+              return "Yes";
+            }
+            return "No";
+          </code>
+          <br>
+          Both of the above "if" statements will perform the same function, only one is using the "&&" operator and the other isn't.
+        </li>
+
+        <li>"||" is a logical operator that will return true if either of the operands is true, otherwise it returns false. For example: 
+          <br>
+          <code>
+            if (num > 10) {
+              return "No";
+            }
+            if (num < 5) {
+              return "No";
+            }
+            return "Yes";
+          </code>
+          <br>
+          <code>
+            if (num > 10 || num < 5) {
+              return "No";
+            }
+            return "Yes";
+          </code>
+          <br>
+          Both of the above sets of code will perform the same function (return the same thing).
+        </li>
+
+
+
       </ul>
       <br>
 
