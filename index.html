@@ -1269,7 +1269,7 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           Both of the above "if" statements will perform the same function, only one is using the "&&" operator and the other isn't.
         </li>
 
-        <li>"||" is a logical operator that will return true if either of the operands is true, otherwise it returns false. For example: 
+        <li>"||" is a logical operator that is referred to as the "or" operator. It will return true if either of the operands is true, otherwise it returns false. For example: 
           <br>
           <code>
             if (num > 10) {
@@ -1471,6 +1471,19 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             The way the "if" statement is executed is enumerated within it like a normal function. Below is an example of a working "if" statement.
             <br>
             Multiple "if" statements can be within the bounds of a single function and those "if" statements don't have to have both returns for true/false, they can have only one if you want it like that.
+        </li>
+
+        <li>"else" is a statement that is used in conjunction with an "if" statement, it is used to return a result when the conditions for the "if" statement aren't met. For example:
+          <br>
+          <code>
+            if (num > 10) {
+              return "Bigger than 10";
+            } else {
+              return "10 or Less";
+            }
+          </code>
+          <br>
+          The "else" statement portion of this "if" statement will return a string if the condition for the "if" statement is not met.
         </li>
 
         </ul>
