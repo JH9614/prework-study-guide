@@ -1533,6 +1533,25 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           So if you want to enter .5 and have it return "less than one" you have to make sure that you don't mix the order up because .5 fills the conditions for two of the conditional statements within the function.
         </li>
 
+        <li>"Switch statements" are used to compare many options against a single value. For example, if you need to have five different inputs that each need to return different things you can use a switch statement instead of 
+          chaining "else if" or "if" statements. Here is an example:
+          <br>
+          <code>
+            switch (fruit) {
+              case "apple":
+                console.log("The fruit is an apple");
+                break;
+              case "orange":
+                console.log("The fruit is an orange");
+                break;
+            }
+          </code>
+          <br>
+          Here the "cases" are the outputs of the function, the "switch" value is the input. So  you're saying "if the switch statement equals apple 'in this CASE', then the return will be: 'The fruit is an apple' ".
+          <br>
+          Switch statements can only use strict equality so using them would be effectively the same as using the strict equality operator. 
+        </li>
+          The "break" portion of the function tells the computer that if that certain case is executed that it doesn't need to execute the rest of the function.
         </ul>
 
         
