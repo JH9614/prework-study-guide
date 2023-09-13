@@ -1552,6 +1552,41 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           Switch statements can only use strict equality so using them would be effectively the same as using the strict equality operator. 
         </li>
           The "break" portion of the function tells the computer that if that certain case is executed that it doesn't need to execute the rest of the function.
+          <br>
+          Here is a better example:
+          <br>
+          <code>
+            function caseInSwitch(val) {
+              let answer = "";
+              
+            switch (val) {
+              case 1:
+              answer = "alpha";
+              break;
+            
+              case 2:
+              answer = "beta";
+              break;
+            
+              case 3:
+              answer = "gamma";
+              break;
+            
+              case 4:
+              answer = "delta";
+              break;
+            }
+                      
+              return answer;
+            }
+            
+            caseInSwitch(1);
+          </code>
+          <br>
+          With the function being called as it is at the end, it would then return the string "alpha". The above example is more understandable and makes more sense. Again, the cases are each of the different values that can be 
+          passed through the function with each answer being respective to the inputted values. 
+          <br>
+          Note that the "case" is set without a declarative operator ("=") and that there is a colon after the value of that particular case is given. There are also semicolons after the "answer" and "break" lines.
         </ul>
 
         
