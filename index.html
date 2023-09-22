@@ -1587,7 +1587,74 @@ Add another @media rule to apply if the browser window is wider than 769px but s
           passed through the function with each answer being respective to the inputted values. 
           <br>
           Note that the "case" is set without a declarative operator ("=") and that there is a colon after the value of that particular case is given. There are also semicolons after the "answer" and "break" lines.
+          <br>
+          If you want multiple cases to return the same answer, omit the break statements between each case and then put a single answer for all of those cases that you want to return the same answer. 
+          "The function will return this answer in each of these cases". 
+          <br>
+          This is how you replace an "else/if" chain with a switch statement:
+          <br>
+          <code>
+            if (val === 1) {
+              answer = "a";
+            } else if (val === 2) {
+              answer = "b";
+            } else {
+              answer = "c";
+            }
+          </code>
+          <br>
+          Replacement:
+          <br>
+          <code>
+            switch (val) {
+              case 1:
+                answer = "a";
+                break;
+              case 2:
+                answer = "b";
+                break;
+              default:
+                answer = "c";
+            }
+          </code>
+
+          <li>Another way to get a true/false return on something instead of using "if/else" statements like this:
+            <br>
+            <code>
+              function isEqual(a, b) {
+                if (a === b) {
+                  return true;
+                } else {
+                  return false;
+                }
+              }
+            </code>
+            <br>
+            Is to just do this:
+            <br>
+            <code>
+              function isEqual(a, b) {
+                return a === b;
+              }
+            </code>
+            <br>
+            This way is simpler and easier to type and the comparison operator alone is what will make the function return "true/false" as that is what they do by default.
+          </li>
+
+          <li>A simple function for returning "undefined":
+            <br>
+            <code>
+              function abTest(a, b) {
+              if (a < 0 || b < 0)
+              return undefined;
+              }
+              
+            </code>
+          </li>
+
         </ul>
+
+
 
         
      
