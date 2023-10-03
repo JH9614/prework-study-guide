@@ -1583,8 +1583,8 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             caseInSwitch(1);
           </code>
           <br>
-          With the function being called as it is at the end, it would then return the string "alpha". The above example is more understandable and makes more sense. Again, the cases are each of the different values that can be 
-          passed through the function with each answer being respective to the inputted values. 
+          With the function being called as it is at the end, it would then return the string "alpha". The above example is more understandable and makes more sense. Again, the cases are each "instances" of the different values
+          that can be passed through the function with each answer being respective to the inputted values. 
           <br>
           Note that the "case" is set without a declarative operator ("=") and that there is a colon after the value of that particular case is given. There are also semicolons after the "answer" and "break" lines.
           <br>
@@ -1617,6 +1617,44 @@ Add another @media rule to apply if the browser window is wider than 769px but s
                 answer = "c";
             }
           </code>
+
+          <li>Another example of something that can be done with switch statements is that you can create a card counting machine. In the casino game Blackjack, a player can determine whether they have an advantage
+             on the next hand over the house by keeping track of the relative number of high and low cards remaining in the deck. This is called Card Counting. Having more high cards remaining in the deck favors the player.
+              Each card is assigned a value according to the table below. When the count is positive, the player should bet high. When the count is zero or negative, the player should bet low.  
+            <code>
+              let count = 0; // "Count" is first declared because the proceding switch function affects it's value.
+
+              function cc(card) { // Note that the function is declared and its name is given with no space between the name and the designation for the value(s) that will be passed through it.
+              switch(card) {
+                case 1:
+                case 2:
+                case 3:
+                case 4:
+                case 5:
+                case 6:    // Note directly below this line that you don't have to use the word "return" before "count++" to cause the function to do what you want it to do, and it's the same for the second set of cases.
+                  count++; // Here the "count" variable is incremented in any of the instances of the value passing through the function being associated with one of these cases.
+                  break;
+                case 10:
+                case "J":
+                case "Q":
+                case "K":
+                case "A":
+                  count--; // As above, here the variable "count" is decremented in any of the instances of the value passing through the function being associated with one of these cases. 
+                  break;
+              }
+              
+              var holdbet = "Hold" // Here the variable "holdbet" is declared which is the one that tells the player whether or not to bet with a string.
+              if (count > 0){
+                holdbet = "Bet"
+              }
+              
+                return count + "" + holdbet;
+              }
+              
+              cc(2);
+            </code>
+            
+            </li>
 
           <li>Another way to get a true/false return on something instead of using "if/else" statements like this:
             <br>
@@ -1654,7 +1692,37 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
         </ul>
 
+        <h4>Objects</h4>
 
+        <ul>
+
+          <li>Objects are similar to arrays in that they store values but disimilar in that their values cannot be accessed through an index. 
+            <br>
+            In objects you store data in what are referred to as properties. To access the data you call the property and then the value is returned by the function. For example:
+            <br>
+            <code>
+              const cat = {
+                "name": "Whiskers",
+                "legs": 4,
+                "tails": 1,
+                "enemies": ["Water", "Dogs"]
+              };
+            </code>
+            <br>
+            In the above example, all the properties are stored as strings like "name", "legs", and "tails", but you can also use numbers as properties and even omit the quotes for the single-word properties. For example:
+            <br>
+            <code>
+              const anotherObject = {
+                make: "Ford",
+                5: "five",
+                "model": "focus"
+              };
+            </code>
+            <br>
+            However, if your object has any  non-string properties, JS will automatically typecast them as strings.
+          </li>
+
+        </ul>
 
         
      
