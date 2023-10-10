@@ -1809,6 +1809,69 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             </code>
           </li>
 
+          <li>Replacing Switch Statements With Objects can be done like this:
+            <br>
+            <code>
+              // Setup
+function phoneticLookup(val) {
+  let result = "";
+
+  // Only change code below this line
+  switch(val) {
+    case "alpha":
+      result = "Adams";
+      break;
+    case "bravo":
+      result = "Boston";
+      break;
+    case "charlie":
+      result = "Chicago";
+      break;
+    case "delta":
+      result = "Denver";
+      break;
+    case "echo":
+      result = "Easy";
+      break;
+    case "foxtrot":
+      result = "Frank";
+  }
+
+  // Only change code above this line
+  return result;
+}
+
+phoneticLookup("charlie");
+
+// The above switch statement can be turned into the object below.
+
+            function phoneticLookup(val) {
+              let result = "";
+
+              // Only change code below this line
+              switch(val) {
+
+              const phoneticLookUp = {
+                "alpha": "Adams",
+                "bravo": "Boston",
+                "charlie": "Chicago",
+                "delta": "Denver",
+                "echo": "Easy",
+                "foxtrot": "Frank",
+              };
+            
+            result = phoneticLookUp[val];
+
+            // Only change code above this line
+            return result;
+          }
+          
+          phoneticLookup("charlie");
+          
+            </code>
+            <br>
+          </li>
+
         </ul>
 
         
