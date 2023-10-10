@@ -1722,6 +1722,91 @@ Add another @media rule to apply if the browser window is wider than 769px but s
             </code>
             <br>
             However, if your object has any  non-string properties, JS will automatically typecast them as strings.
+            <br>
+            If you want to read or access values within the ojbect you can use dot notation or bracket notation, similar to an array. If any of the properties of the object you're using have spaces in them you will need to use 
+            bracket notation.
+             Here is an example of dot notation:
+            <br>
+            <code>
+              const myObj = {
+                prop1: "val1",
+                prop2: "val2"
+              };
+              
+              const prop1val = myObj.prop1;
+              const prop2val = myObj.prop2;
+            </code>
+            <br>
+            Here, two more variables are declared after the object whos respective values are the values of the object. Note: If any of the properties of the objects are strings, discard the quotation marks and only use the text
+            data to access/name/call the individual property.
+            <br>
+            Here is an example of bracket notation:
+            <br>
+            <code>
+              const myObj = {
+                "Space Name": "Kirk",
+                "More Space": "Spock",
+                "NoSpace": "USS Enterprise"
+              };
+              
+              myObj["Space Name"];
+              myObj['More Space'];
+              myObj["NoSpace"];
+            </code>
+            <br>
+            Note that there are no spaces or any other marks/figures between the "myObj" and the bracket. Also the quotations for the names of the properties are kept in this notation as apposed to dot notation. Also you can use 
+            bracket notation on things that don't have spaces, so you don't have to switch between notations if you don't want to.
+            <br>
+            Another way to use bracket notation to access values within the properties of objects is to use the declaration of variables. You declare a variable as being equal to the name of one of the properties and then declare
+            another variable as being equal to the name of the object with the previous variable declared being in the brackets next to the name of the object. Here is an example:
+            <br>
+            <code>
+              const dogs = {
+                Fido: "Mutt",
+                Hunter: "Doberman",
+                Snoopie: "Beagle"
+              };
+              
+              const myDog = "Hunter";
+              const myBreed = dogs[myDog];
+              console.log(myBreed);
+            </code>
+            <br>
+            The above code example will return the string "Doberman".
+          </li>
+
+          <li>Updating Object Properties is done by stating the variable name of the object and then using dot notation to set the property equal to the new value, or you can use bracket notation like above. Here is an example:
+            <br>
+            <code>
+              const ourDog = {
+                "name": "Camper",
+                "legs": 4,
+                "tails": 1,
+                "friends": ["everything!"]
+              };
+
+              ourDog.name = "Happy Camper";
+              // or
+              ourDog["name"] = "Happy Camper";
+            </code>
+            <br>
+            The above code example will change the value of the "name" property from "Camper" to "Happy Camper".
+            <br>
+            You can use the above method to ADD properties to objects as well. As in if you wanted to add a barking property with its designated value then you could do this:
+            <br>
+            <code>
+              ourDog.bark = "bow-wow";"
+              // or
+              ourDog["bark"] = "bow-wow"
+            </code>
+            <br>
+            We can also delete things from objects with the same method. Here is an example:
+            <br>
+            <code>
+              delete ourDog.bark;
+              //or
+              delete ourDog["bark"];
+            </code>
           </li>
 
         </ul>
