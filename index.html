@@ -1175,8 +1175,11 @@ Add another @media rule to apply if the browser window is wider than 769px but s
 
         <li>
           "let" is another JS declaration keyword that is used to allieviate the above problem. When using "let" to declare a variable, that variable's value cannot be reassigned. So, "let person = Jon" won't 
-          allow the variable's value to change to "Beth" if you write "let person = Beth" later. However, the variable's value can be changed/reassigned with different operations,
-           just not new declarations.
+          allow the variable's value to change to "Beth" if you write "let person = Beth" later. However, the variable's value can be changed/reassigned with different operations, just not new declarations. For example if you
+          need to change the variable's value from "Beth" to "Brent" then you would just write "person = Brent" after the initial declaration of the variable. 
+          <br>
+          Another thing to know about "let" is that it is code block based. A code block is defined as anything that is between two curly braces or "{}". If there is a let variable that is declared within the curly braces, that 
+          variable will be undefined if called outside the braces. Also, a "let" variable can only be declared once within the code block, it will not be allowed to change outside of other operations like the one described above.
         </li>
 
         <li>"const" is another JS keyword that can be used like "let" in that its declared contents cannot be reassigned in value. Attempting to do so will result in an error message in the 
@@ -1849,7 +1852,6 @@ phoneticLookup("charlie");
               let result = "";
 
               // Only change code below this line
-              switch(val) {
 
               const phoneticLookUp = {
                 "alpha": "Adams",
@@ -1867,9 +1869,9 @@ phoneticLookup("charlie");
           }
           
           phoneticLookup("charlie");
-          
             </code>
             <br>
+
           </li>
 
         </ul>
